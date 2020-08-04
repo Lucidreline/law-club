@@ -1,0 +1,39 @@
+#nav-bar {
+  width: 90%;
+  height: 8.5rem;
+  padding-top: 2rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    text-align: center;
+
+    .logo-text {
+      font-weight: normal;
+      color: white;
+      font-size: 1rem;
+    }
+  }
+
+  .links-container {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+
+    button {
+      display: block;
+      color: white;
+      background: none;
+      border: none;
+      margin-left: 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      scale: 1.05;
+    }
+  }
+}
