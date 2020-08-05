@@ -2,33 +2,42 @@ import React from 'react';
 
 import './nav-bar.styles.scss';
 
-const NavBar = () => {
-  return (
-    <div id='nav-bar'>
-      <div className='logo-container'>
-        <h5 className='logo-text'>CSUDH Pre Law Society</h5>
+class NavBar extends React.Component {
+  constructor() {
+    super();
+    this.state = { open: false, linkFade: false };
+  }
+
+  openCloseHambMenu = () => {
+    this.setState({ open: !this.state.open, linkFade: !this.state.linkFade });
+  };
+
+  render() {
+    return (
+      <nav id='nav-bar'>
+        <i onClick={this.openCloseHambMenu} class='fas fa-bars hamburger'></i>
         <img
           className='logo-img'
           src='https://res.cloudinary.com/dglxjd018/image/upload/c_scale,h_75/v1596574330/pls/whiteLogo_zbrutt.png'
-          alt='logo'
+          alt=''
         />
-      </div>
-      <div className='links-container'>
-        <button className='header-btn clickable-color color-hover'>
-          Events
-        </button>
-        <button className='header-btn clickable-color color-hover'>
-          Members
-        </button>
-        <button className='header-btn clickable-color color-hover'>
-          About Us
-        </button>
-        <button className='header-btn clickable-color color-hover'>
-          Contact Us
-        </button>
-      </div>
-    </div>
-  );
-};
+        <ul className={`nav-links ${this.state.open ? ' open' : ''}`}>
+          <li className={`nav-link ${this.state.linkFade ? ' fade' : ''}`}>
+            Events
+          </li>
+          <li className={`nav-link ${this.state.linkFade ? ' fade' : ''}`}>
+            Members
+          </li>
+          <li className={`nav-link ${this.state.linkFade ? ' fade' : ''}`}>
+            About Us
+          </li>
+          <li className={`nav-link ${this.state.linkFade ? ' fade' : ''}`}>
+            Contact Us
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
 
 export default NavBar;

@@ -1,39 +1,88 @@
-#nav-bar {
-  width: 90%;
-  height: 8.5rem;
-  padding-top: 2rem;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav#nav-bar {
+  height: 3.5rem;
+  position: relative;
 
-  .logo-container {
-    text-align: center;
+  .hamburger {
+    display: none;
+  }
+  .logo-img {
+    position: absolute;
+    margin-left: 4.5%;
+    top: 0.5rem;
+  }
 
-    .logo-text {
-      font-weight: normal;
+  .nav-links {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 5%;
+    width: 60%;
+    height: 100%;
+
+    .nav-link {
+      cursor: pointer;
+      margin-left: 2rem;
       color: white;
       font-size: 1rem;
     }
   }
+}
+@media screen and (max-width: 769px) {
+  nav#nav-bar {
+    position: relative;
 
-  .links-container {
-    display: flex;
-    height: 100%;
-    align-items: flex-start;
-
-    button {
+    i.hamburger {
       display: block;
+      z-index: 2;
+      font-size: 1.75rem;
       color: white;
-      background: none;
-      border: none;
-      margin-left: 1.2rem;
-      font-size: 1rem;
+      position: absolute;
       cursor: pointer;
-      transition: 0.2s;
+      right: 8%;
+      top: 45%;
     }
-    button:hover {
-      scale: 1.05;
+    .nav-links {
+      position: fixed;
+      background: #c2a200;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 50% 0;
+      clip-path: circle(100px at 120% -15%);
+      -webkit-clip-path: circle(100px at 110% -15%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+
+      .nav-link {
+        opacity: 0;
+        margin-left: 0;
+
+        &:nth-child(1) {
+          transition: all 0.5s ease 0.2s;
+        }
+        &:nth-child(2) {
+          transition: all 0.5s ease 0.35s;
+        }
+        &:nth-child(3) {
+          transition: all 0.5s ease 0.5s;
+        }
+        &:nth-child(4) {
+          transition: all 0.5s ease 0.65s;
+        }
+
+        &.fade {
+          opacity: 1;
+          scale: 1.5;
+        }
+      }
+
+      &.open {
+        pointer-events: all;
+        clip-path: circle(1200px at 120% -15%);
+        -webkit-clip-path: circle(1200px at 110% -15%);
+      }
     }
   }
 }

@@ -11,6 +11,7 @@ body {
   font-family: 'Hind', Roboto, sans-serif;
   background-color: #fff;
   font-size: 62.5%;
+  position: relative;
 }
 
 h1 {
