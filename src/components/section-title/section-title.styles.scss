@@ -1,0 +1,14 @@
+.section-title {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  line-height: 0.1em;
+  margin: 5rem 0 4rem;
+
+  span {
+    color: #ffd600;
+    font-size: 2rem;
+    background: #fff;
+    padding: 0 1rem;
+  }
+}
