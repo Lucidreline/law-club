@@ -1,0 +1,41 @@
+.card {
+  width: 29rem;
+  height: 37.5rem;
+  margin: 0 2.5rem 2.5rem 2.5rem;
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  transition: 0.3s;
+
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 2.5px 3px,
+    rgba(0, 0, 0, 0.3) -1px 6px 14px;
+
+  &:hover {
+    scale: 1.025;
+    box-shadow: rgba(0, 0, 0, 0.35) -2px 4.5px 5px,
+      rgba(0, 0, 0, 0.3) -2px 8px 15px;
+    .card-content {
+      opacity: 1;
+    }
+  }
+
+  .card-content {
+    transition: 0.3s ease-out;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: inherit;
+
+    p {
+      color: white;
+      font-size: 2.3rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

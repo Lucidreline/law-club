@@ -4,9 +4,8 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 16px;
+  font-size: 10px;
 }
-
 body {
   font-family: 'Hind', Roboto, sans-serif;
   background-color: #fff;
