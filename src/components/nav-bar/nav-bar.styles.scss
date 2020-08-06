@@ -25,7 +25,7 @@ nav#nav-bar {
       cursor: pointer;
       margin-left: 2rem;
       color: white;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
 
       &:hover {
         scale: 1.05;
@@ -40,7 +40,7 @@ nav#nav-bar {
     i.hamburger {
       display: block;
       z-index: 2;
-      font-size: 1.75rem;
+      font-size: 2.75rem;
       color: white;
       position: absolute;
       cursor: pointer;
@@ -63,6 +63,7 @@ nav#nav-bar {
       .nav-link {
         opacity: 0;
         margin-left: 0;
+        font-size: 2rem;
 
         &:nth-child(1) {
           transition: all 0.5s ease 0.2s;
