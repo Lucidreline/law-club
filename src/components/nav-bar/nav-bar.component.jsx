@@ -15,7 +15,10 @@ class NavBar extends React.Component {
   render() {
     return (
       <nav id='nav-bar'>
-        <i onClick={this.openCloseHambMenu} class='fas fa-bars hamburger'></i>
+        <i
+          onClick={this.openCloseHambMenu}
+          className='fas fa-bars hamburger'
+        ></i>
         <img
           className='logo-img'
           src='https://res.cloudinary.com/dglxjd018/image/upload/c_scale,h_75/v1596574330/pls/whiteLogo_zbrutt.png'

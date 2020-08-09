@@ -6,8 +6,8 @@ import Card from '../card/card.component';
 const CardList = ({ cards }) => {
   return (
     <div className='card-list'>
-      {cards.map((card) => (
-        <Card image={card.image} />
+      {cards.map((card, index) => (
+        <Card key={index} image={card.image} />
       ))}
     </div>
   );
