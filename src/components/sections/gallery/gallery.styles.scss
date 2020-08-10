@@ -1,3 +1,15 @@
-#gallery {
-  margin-bottom: 50rem;
+.btns {
+  margin-top: 47rem;
+  text-align: center;
+  .gallery-btn {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    margin: 0 2rem;
+    transition: 0.2s;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
 }

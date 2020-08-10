@@ -22,19 +22,46 @@ class Gallery extends Component {
         },
       ],
       activeImage: {},
+      userTouchedBtnRecently: false,
     };
   }
 
   componentDidMount() {
     this.setState({ activeImage: this.state.images[0] });
+    this.slideShowinterval = setInterval(this.handleInterval, 7000);
   }
+
+  handleInterval = () => {
+    if (this.state.userTouchedBtnRecently) {
+      this.setState({ userTouchedBtnRecently: false });
+    } else {
+      this.rotateGallery();
+    }
+  };
+
+  componentWillUnmount() {
+    clearInterval(this.slideShowinterval);
+  }
+
+  rotateGallery = () => {
+    let newIndex = this.getActiveIndex() + 1;
+    if (newIndex > this.state.images.length - 1) {
+      newIndex = 0;
+    }
+    this.setState({
+      activeImage: this.state.images[newIndex],
+    });
+  };
 
   nextImage = () => {
     let newIndex = this.getActiveIndex() + 1;
     if (newIndex > this.state.images.length - 1) {
       newIndex = 0;
     }
-    this.setState({ activeImage: this.state.images[newIndex] });
+    this.setState({
+      activeImage: this.state.images[newIndex],
+      userTouchedBtnRecently: true,
+    });
   };
 
   prevImage = () => {
@@ -42,7 +69,10 @@ class Gallery extends Component {
     if (newIndex < 0) {
       newIndex = this.state.images.length - 1;
     }
-    this.setState({ activeImage: this.state.images[newIndex] });
+    this.setState({
+      activeImage: this.state.images[newIndex],
+      userTouchedBtnRecently: true,
+    });
   };
 
   getActiveIndex = () => {
@@ -53,12 +83,19 @@ class Gallery extends Component {
     return (
       <div id='gallery'>
         <SectionTitle title='Gallery' />
-        <button onClick={this.prevImage}>Previous</button>
-        <button onClick={this.nextImage}>Next</button>
+
         <GalleryList
           activeIndex={this.getActiveIndex()}
           images={this.state.images}
         />
+        <div className='btns'>
+          <button className='gallery-btn' onClick={this.prevImage}>
+            <i className='fas fa-angle-left'></i>
+          </button>
+          <button className='gallery-btn' onClick={this.nextImage}>
+            <i className='fas fa-angle-right'></i>
+          </button>
+        </div>
       </div>
     );
   }
