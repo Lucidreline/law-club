@@ -1,26 +1,23 @@
 import React from 'react';
 
+import Carousel from 'react-bootstrap/Carousel';
+
 import './gallery-list.styles.scss';
 import GalleryImage from '../gallery-image/gallery-image.component';
 
-const GalleryList = ({ images, activeIndex }) => {
+const GalleryList = ({ images }) => {
   return (
-    <div className={`gallery-list active-image-${activeIndex}`}>
-      <div
-        className='gallery-list-container '
-        style={{
-          transform: `translateX(-${activeIndex * (100 / images.length)}%)`,
-        }}
-      >
+    <div className='gallery-list'>
+      <Carousel>
         {images.map((image, index) => (
-          <GalleryImage
-            index={index}
-            key={index}
-            imageUrl={image.url}
-            caption={image.caption}
-          />
+          <Carousel.Item className='carousel-item'>
+            <GalleryImage index={index} key={index} imageUrl={image.url} />
+            <Carousel.Caption>
+              <p className='custom-carousel-caption'>{image.caption}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
         ))}
-      </div>
+      </Carousel>
     </div>
   );
 };

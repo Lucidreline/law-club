@@ -93,14 +93,6 @@ class Gallery extends Component {
           activeIndex={this.getActiveIndex()}
           images={this.state.images}
         />
-        <div className='btns'>
-          <button className='gallery-btn' onClick={this.prevImage}>
-            <i className='fas fa-angle-left'></i>
-          </button>
-          <button className='gallery-btn' onClick={this.nextImage}>
-            <i className='fas fa-angle-right'></i>
-          </button>
-        </div>
       </div>
     );
   }
