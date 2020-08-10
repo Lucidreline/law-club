@@ -10,8 +10,8 @@ const GalleryList = ({ images }) => {
     <div className='gallery-list'>
       <Carousel>
         {images.map((image, index) => (
-          <Carousel.Item className='carousel-item'>
-            <GalleryImage index={index} key={index} imageUrl={image.url} />
+          <Carousel.Item key={index} className='carousel-item'>
+            <GalleryImage index={index} imageUrl={image.url} />
             <Carousel.Caption>
               <p className='custom-carousel-caption'>{image.caption}</p>
             </Carousel.Caption>

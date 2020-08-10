@@ -26,73 +26,14 @@ class Gallery extends Component {
           caption: 'Group photo in front of our bulletin board!',
         },
       ],
-      activeImage: {},
-      userTouchedBtnRecently: false,
     };
   }
-
-  componentDidMount() {
-    this.setState({ activeImage: this.state.images[0] });
-    this.slideShowinterval = setInterval(this.handleInterval, 7000);
-  }
-
-  handleInterval = () => {
-    if (this.state.userTouchedBtnRecently) {
-      this.setState({ userTouchedBtnRecently: false });
-    } else {
-      this.rotateGallery();
-    }
-  };
-
-  componentWillUnmount() {
-    clearInterval(this.slideShowinterval);
-  }
-
-  rotateGallery = () => {
-    let newIndex = this.getActiveIndex() + 1;
-    if (newIndex > this.state.images.length - 1) {
-      newIndex = 0;
-    }
-    this.setState({
-      activeImage: this.state.images[newIndex],
-    });
-  };
-
-  nextImage = () => {
-    let newIndex = this.getActiveIndex() + 1;
-    if (newIndex > this.state.images.length - 1) {
-      newIndex = 0;
-    }
-    this.setState({
-      activeImage: this.state.images[newIndex],
-      userTouchedBtnRecently: true,
-    });
-  };
-
-  prevImage = () => {
-    let newIndex = this.getActiveIndex() - 1;
-    if (newIndex < 0) {
-      newIndex = this.state.images.length - 1;
-    }
-    this.setState({
-      activeImage: this.state.images[newIndex],
-      userTouchedBtnRecently: true,
-    });
-  };
-
-  getActiveIndex = () => {
-    return this.state.images.indexOf(this.state.activeImage);
-  };
 
   render() {
     return (
       <div id='gallery'>
         <SectionTitle title='Gallery' />
-
-        <GalleryList
-          activeIndex={this.getActiveIndex()}
-          images={this.state.images}
-        />
+        <GalleryList images={this.state.images} />
       </div>
     );
   }
