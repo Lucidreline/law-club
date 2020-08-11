@@ -3,7 +3,7 @@ import SectionTitle from '../../section-title/section-title.component';
 
 const ContactUs = () => {
   return (
-    <div>
+    <div id='contact-us'>
       <SectionTitle title='Contact Us!' />
     </div>
   );
