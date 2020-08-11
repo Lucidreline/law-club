@@ -9,7 +9,18 @@ class NavBar extends React.Component {
   }
 
   openCloseHambMenu = () => {
-    this.setState({ open: !this.state.open, linkFade: !this.state.linkFade });
+    this.setState(
+      { open: !this.state.open, linkFade: !this.state.linkFade },
+      () => {
+        // i dont want the user to scroll while in the nav screen
+        if (this.state.open) {
+          console.log('here');
+          document.querySelector('body').style.overflowY = 'hidden';
+        } else {
+          document.querySelector('body').style.overflowY = 'scroll';
+        }
+      }
+    );
   };
 
   render() {

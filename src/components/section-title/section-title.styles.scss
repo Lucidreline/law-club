@@ -4,12 +4,24 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 0.1em;
   margin: 7rem 0 6rem;
-  height: 1.7rem;
+  height: 2.7rem;
 
   span {
     color: #ffd600;
-    font-size: 3rem;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
     background: #fff;
     padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section-title {
+    height: 1.8rem;
+
+    span {
+      font-size: 3rem;
+    }
   }
 }
