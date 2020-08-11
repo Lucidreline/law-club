@@ -7,7 +7,7 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: 'Hind', Roboto, sans-serif;
+  font-family: 'Hind', Roboto, sans-serif !important;
   background-color: #fff;
   font-size: 62.5%;
   position: relative;
