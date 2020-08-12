@@ -7,7 +7,7 @@ const CardList = ({ cards }) => {
   return (
     <div className='card-list'>
       {cards.map((card, index) => (
-        <Card key={index} image={card.image} />
+        <Card key={index} data={card} />
       ))}
     </div>
   );

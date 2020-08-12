@@ -17,8 +17,10 @@ class NavBar extends React.Component {
         if (this.state.open) {
           console.log('here');
           document.querySelector('body').style.overflowY = 'hidden';
+          document.querySelector('body').style.position = 'fixed';
         } else {
           document.querySelector('body').style.overflowY = 'scroll';
+          document.querySelector('body').style.position = 'relative';
         }
       }
     );
@@ -84,7 +86,7 @@ class NavBar extends React.Component {
               url.includes('/contact') ? 'active' : ''
             }`}
           >
-            <Link to='/contact'>Events</Link>
+            <Link to='/contact'>Contact Us</Link>
           </li>
         </ul>
       </nav>

@@ -18,28 +18,47 @@
     scale: 1.025;
     box-shadow: rgba(0, 0, 0, 0.35) -2px 4.5px 5px,
       rgba(0, 0, 0, 0.3) -2px 8px 15px;
-    .card-content {
+    .dark-hover {
       opacity: 1;
     }
   }
 
-  .card-content {
+  .dark-hover {
     transition: 0.3s ease-out;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.65);
     height: 100%;
     width: 100%;
     position: relative;
     cursor: pointer;
     opacity: 0;
-    border-radius: inherit;
+    border-radius: 6px;
 
-    p {
-      color: white;
-      font-size: 2.3rem;
+    .card-content {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 80%;
       transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-between;
+      height: 80%;
+      color: white;
+
+      .name {
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: #ffd600;
+      }
+      p.link {
+        font-size: 2rem;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

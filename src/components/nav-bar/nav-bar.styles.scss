@@ -46,13 +46,13 @@ nav#nav-bar {
     }
   }
 }
-@media screen and (max-width: 845px) {
+@media screen and (max-width: 890px) {
   nav#nav-bar {
     position: relative;
 
     i.hamburger {
       display: block;
-      z-index: 2;
+      z-index: 21;
       font-size: 2.75rem;
       color: white;
       position: absolute;
@@ -67,10 +67,10 @@ nav#nav-bar {
       width: 100%;
       flex-direction: column;
       justify-content: space-around;
-      padding: 40% 0 60%;
+      padding: 30% 0 70%;
       clip-path: circle(110px at 130% -15%);
       -webkit-clip-path: circle(110px at 130% -15%);
-      transition: all 0.5s ease-out;
+      transition: all 0.8s ease-out;
       pointer-events: none;
 
       .nav-link {
@@ -98,9 +98,10 @@ nav#nav-bar {
       }
 
       &.open {
+        z-index: 20;
         pointer-events: all;
-        clip-path: circle(1400px at 120% -15%);
-        -webkit-clip-path: circle(1400px at 120% -15%);
+        clip-path: circle(1600px at 120% -15%);
+        -webkit-clip-path: circle(1600px at 120% -15%);
       }
     }
   }
