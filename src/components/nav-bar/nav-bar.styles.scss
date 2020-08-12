@@ -1,6 +1,7 @@
 nav#nav-bar {
   height: 3.5rem;
   position: relative;
+  margin-bottom: 5.5rem;
 
   .hamburger {
     display: none;
@@ -24,8 +25,20 @@ nav#nav-bar {
     .nav-link {
       cursor: pointer;
       margin-left: 2rem;
-      color: white;
       font-size: 1.8rem;
+
+      &.active {
+        a {
+          border-bottom: white 2px solid;
+        }
+      }
+
+      a {
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       &:hover {
         scale: 1.05;
@@ -33,7 +46,7 @@ nav#nav-bar {
     }
   }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 845px) {
   nav#nav-bar {
     position: relative;
 
@@ -57,7 +70,7 @@ nav#nav-bar {
       padding: 40% 0 60%;
       clip-path: circle(110px at 130% -15%);
       -webkit-clip-path: circle(110px at 130% -15%);
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       pointer-events: none;
 
       .nav-link {
@@ -65,17 +78,17 @@ nav#nav-bar {
         margin-left: 0;
         font-size: 2.6rem;
 
-        &:nth-child(1) {
-          transition: all 0.5s ease 0.2s;
+        &.active {
+          a {
+            border-bottom: none;
+          }
         }
-        &:nth-child(2) {
-          transition: all 0.5s ease 0.35s;
-        }
-        &:nth-child(3) {
-          transition: all 0.5s ease 0.5s;
-        }
-        &:nth-child(4) {
-          transition: all 0.5s ease 0.65s;
+
+        $i: 0;
+        @for $i from 0 to 7 {
+          &:nth-child(#{$i}) {
+            transition: all 0.5s ease #{($i * 0.15) + 0.05}s;
+          }
         }
 
         &.fade {

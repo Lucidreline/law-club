@@ -44,3 +44,8 @@ a {
 li {
   list-style: none;
 }
+
+.main-container {
+  width: 90%;
+  margin: auto;
+}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import SectionTitle from '../../section-title/section-title.component';
-import CardList from '../../card-list/card-list.component';
+import SectionTitle from '../../../section-title/section-title.component';
+import CardList from '../../../card-list/card-list.component';
 
-import events from '../../../data/events.data';
+import events from '../../../../data/events.data';
 
 class Events extends Component {
   constructor() {

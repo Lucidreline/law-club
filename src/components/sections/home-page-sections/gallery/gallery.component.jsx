@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import SectionTitle from '../../section-title/section-title.component';
-import GalleryList from '../../gallery-list/gallery-list.component';
+import SectionTitle from '../../../section-title/section-title.component';
+import GalleryList from '../../../gallery-list/gallery-list.component';
 
 import './gallery.styles.scss';
-import images from '../../../data/gallery-images.data';
+import images from '../../../../data/gallery-images.data';
 class Gallery extends Component {
   constructor() {
     super();

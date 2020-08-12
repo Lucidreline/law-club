@@ -1,23 +1,20 @@
 import React from 'react';
 import './App.css';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-// sections
-import Hero from './components/sections/hero/hero.component';
-import Events from './components/sections/events/events.component';
-import MeetTheBoard from './components/sections/meet-the-board/meet-the-board.component';
-import Gallery from './components/sections/gallery/gallery.component';
-import ContactUs from './components/sections/contact-us/contact-us.component';
+import HomePage from './components/pages/home-page/home-page.component';
+import BoardMembersPage from './components/pages/board-members-page/board-members-page.component';
 
 function App() {
   return (
     <div className='App'>
-      <Hero />
-      <div id='container'>
-        <Events />
-        <MeetTheBoard />
-        <Gallery />
-        <ContactUs />
-      </div>
+      <Switch>
+        <Route exact path='/'>
+          <Redirect to='/home' />
+        </Route>
+        <Route exact path='/home' component={HomePage} />
+        <Route exact path='/members' component={BoardMembersPage} />
+      </Switch>
     </div>
   );
 }

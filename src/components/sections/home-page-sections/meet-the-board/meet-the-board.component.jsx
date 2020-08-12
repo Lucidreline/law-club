@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import CardList from '../../card-list/card-list.component';
-import SectionTitle from '../../section-title/section-title.component';
+import CardList from '../../../card-list/card-list.component';
+import SectionTitle from '../../../section-title/section-title.component';
 
-import members from '../../../data/board-members.data';
+import members from '../../../../data/board-members.data';
 
 class MeetTheBoard extends Component {
   constructor() {
