@@ -3,11 +3,17 @@ import React from 'react';
 import './card-list.styles.scss';
 import Card from '../card/card.component';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 const CardList = ({ cards }) => {
   return (
     <div className='card-list'>
       {cards.map((card, index) => (
-        <Card key={index} data={card} />
+        <div data-aos='fade-up'>
+          <Card key={index} data={card} />
+        </div>
       ))}
     </div>
   );

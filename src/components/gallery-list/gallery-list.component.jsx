@@ -7,7 +7,7 @@ import GalleryImage from '../gallery-image/gallery-image.component';
 
 const GalleryList = ({ images }) => {
   return (
-    <div className='gallery-list'>
+    <div className='gallery-list' data-aos='flip-up'>
       <Carousel>
         {images.map((image, index) => (
           <Carousel.Item key={index} className='carousel-item'>
