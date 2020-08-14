@@ -1,4 +1,4 @@
-const members = [
+const boardMembers = [
   {
     type: 'board member',
     firstName: 'Adriana',
@@ -93,4 +93,4 @@ const members = [
   },
 ];
 
-export default members;
+export default boardMembers;
