@@ -7,7 +7,7 @@ import boardMembers from '../../../data/board-members.data'
 
 import NavBar from '../../nav-bar/nav-bar.component';
 import SectionTitle from '../../section-title/section-title.component'
-import BoardMemberCard from '../../sections/board-members-page-section/board-member-card/board-member-card'
+import BoardMemberCard from '../../sections/board-members-page-sections/board-member-card/board-member-card'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
