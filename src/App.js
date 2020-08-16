@@ -4,6 +4,9 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import HomePage from './components/pages/home-page/home-page.component';
 import BoardMembersPage from './components/pages/board-members-page/board-members-page.component';
+import EventsPage from './components/pages/events/events.component'
+import ContactUsPage from './components/pages/contact-us/contact-us-page.component';
+import AboutUsPage from './components/pages/about-us/about-us-page.component';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         </Route>
         <Route exact path='/home' component={HomePage} />
         <Route exact path='/members' component={BoardMembersPage} />
+        <Route exact path='/events' component={EventsPage} />
+        <Route exact path='/contact' component={ContactUsPage} />
+        <Route exact path='/about' component={AboutUsPage} />
       </Switch>
     </div>
   );
