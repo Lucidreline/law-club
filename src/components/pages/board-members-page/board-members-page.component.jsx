@@ -8,6 +8,11 @@ import boardMembers from '../../../data/board-members.data'
 import NavBar from '../../nav-bar/nav-bar.component';
 import SectionTitle from '../../section-title/section-title.component'
 import BoardMemberCard from '../../sections/board-members-page-section/board-member-card/board-member-card'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 class BoardMembersPage extends React.Component {
   constructor() {
     super()
@@ -22,7 +27,7 @@ class BoardMembersPage extends React.Component {
     if (splitUrl.length > 4) {
       //href contains a url
       jump(`#id-${splitUrl[4]}`, {
-        offset: -20,
+        offset: -120,
         duration: 2000
       })
     }
@@ -42,7 +47,10 @@ class BoardMembersPage extends React.Component {
         <div className='main-container'>
           <SectionTitle title='Meet The Board' />
           {this.state.boardMembers.map((boardMember, index) => (
-            <BoardMemberCard boardMember={boardMember} index={index} key={index} />
+            <div data-aos='fade-up'>
+
+              <BoardMemberCard boardMember={boardMember} index={index} key={index} />
+            </div>
           ))}
         </div>
       </div>

@@ -2,6 +2,8 @@ import React from 'react';
 
 import './board-member-card.styles.scss'
 
+
+
 const BoardMemberCard = ({ boardMember, index }) => {
   const photoSide =
     <div className='photo-side'>
