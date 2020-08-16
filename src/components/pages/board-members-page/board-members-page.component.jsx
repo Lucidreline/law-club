@@ -16,6 +16,24 @@ class BoardMembersPage extends React.Component {
       boardMembers
     }
   }
+
+  handleScrollJump = () => {
+    const splitUrl = window.location.href.split('/')
+    if (splitUrl.length > 4) {
+      //href contains a url
+      jump(`#id-${splitUrl[4]}`, {
+        offset: -20,
+        duration: 2000
+      })
+    }
+  }
+
+  componentDidMount() {
+    // starts the page off at the top
+    window.scrollTo(0, 0);
+    this.handleScrollJump()
+
+  }
   render() {
 
     return (
