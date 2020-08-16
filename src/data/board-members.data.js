@@ -1,5 +1,6 @@
 const boardMembers = [
   {
+    id: '0',
     type: 'board member',
     firstName: 'Adriana',
     lastName: 'Jimenez',
@@ -12,6 +13,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_50/v1596574094/pls/boardMembers/boardMembers_Adriana_snwgp6.jpg',
   },
   {
+    id: '1',
     type: 'board member',
     firstName: 'Edwin',
     lastName: 'Oyarce',
@@ -24,6 +26,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_90/v1596574094/pls/boardMembers/boardMembers_edwin_xcetpe.jpg',
   },
   {
+    id: '2',
     type: 'board member',
     firstName: 'Yulissa',
     lastName: 'Jimenez',
@@ -35,6 +38,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_45/v1597125099/pls/boardMembers/Yulissa_pz0rty.jpg',
   },
   {
+    id: '3',
     type: 'board member',
     firstName: 'Josue',
     lastName: '',
@@ -47,6 +51,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_18/v1596574096/pls/boardMembers/boardMembers_josue_es0ac5.jpg',
   },
   {
+    id: '4',
     type: 'board member',
     firstName: 'Cynthia',
     lastName: 'Villa',
@@ -59,6 +64,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_15/v1596574108/pls/boardMembers/boardMembers_cynthia_ytjbyc.jpg',
   },
   {
+    id: '5',
     type: 'board member',
     firstName: 'Yazmine',
     lastName: '',
@@ -70,6 +76,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_50/v1597201697/pls/boardMembers/Yazmine_o4bacp.png',
   },
   {
+    id: '6',
     type: 'board member',
     firstName: 'Darlene',
     lastName: 'Garcia',
@@ -81,6 +88,7 @@ const boardMembers = [
       'https://res.cloudinary.com/dglxjd018/image/upload/q_50/v1597125099/pls/boardMembers/Kimberly_adg5at.jpg',
   },
   {
+    id: '7',
     type: 'board member',
     firstName: 'Kimberly',
     lastName: 'Villacorta',

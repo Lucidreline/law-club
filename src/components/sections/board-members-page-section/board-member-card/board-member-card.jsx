@@ -35,7 +35,7 @@ const BoardMemberCard = ({ boardMember, index }) => {
     </div>
   }
   return (
-    <div className='board-member-card'>
+    <div className='board-member-card' id={`id-${boardMember.id}`}>
       {correctOrder}
     </div>
 

@@ -11,13 +11,13 @@ import AboutUsPage from './components/pages/about-us/about-us-page.component';
 function App() {
   return (
     <div className='App'>
-      <Switch>
+      <Switch >
         <Route exact path='/'>
           <Redirect to='/home' />
         </Route>
         <Route exact path='/home' component={HomePage} />
-        <Route exact path='/members' component={BoardMembersPage} />
-        <Route exact path='/events' component={EventsPage} />
+        <Route path='/members' component={BoardMembersPage} />
+        <Route path='/events' component={EventsPage} />
         <Route exact path='/contact' component={ContactUsPage} />
         <Route exact path='/about' component={AboutUsPage} />
       </Switch>

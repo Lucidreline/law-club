@@ -1,4 +1,5 @@
 import React from 'react';
+import jump from 'jump.js'
 
 import './board-members-page.styles.scss'
 
