@@ -31,9 +31,9 @@ class NavBar extends React.Component {
   };
 
   handleLinkClicked = () => {
-    console.log('here')
-    document.querySelector('body').style.overflowY = 'scroll';
-    document.querySelector('body').style.position = 'relative';
+    const body = document.body
+    body.style.overflowY = 'scroll';
+    body.style.position = 'relative';
   }
 
   render() {
@@ -47,6 +47,7 @@ class NavBar extends React.Component {
 
         <Link to='/home' >
           <img
+            onClick={this.handleLinkClicked}
             className='logo-img'
             src='https://res.cloudinary.com/dglxjd018/image/upload/c_scale,h_75/v1596574330/pls/whiteLogo_zbrutt.png'
             alt=''
@@ -64,12 +65,14 @@ class NavBar extends React.Component {
          */}
         <ul className={`nav-links ${this.state.open ? ' open' : ''}`}>
           <li
+            onClick={this.handleLinkClicked}
             className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/home') ? 'active' : ''
               }`}
           >
             <Link to='/home' >Home</Link>
           </li>
           <li
+            onClick={this.handleLinkClicked}
             className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/events') ? 'active' : ''
               }`}
           >
@@ -83,12 +86,14 @@ class NavBar extends React.Component {
             <Link to='/members' >Members</Link>
           </li>
           <li
+            onClick={this.handleLinkClicked}
             className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/about') ? 'active' : ''
               }`}
           >
             <Link to='/about' >About Us</Link>
           </li>
           <li
+            onClick={this.handleLinkClicked}
             className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/contact') ? 'active' : ''
               }`}
           >
