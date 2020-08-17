@@ -2,19 +2,19 @@ const images = [
   {
     type: 'gallery image',
     url:
-      'https://res.cloudinary.com/dglxjd018/image/upload/v1597029227/pls/gallery/workingOnBoard2_sagdyg.jpg',
+      'https://res.cloudinary.com/dglxjd018/image/upload/v1597698419/PreLawSociety/Gallery/Gallery_Working_on_Bulletin_Board_upbbvw.jpg',
     caption: 'Working on our bulletin board on campus!',
   },
   {
     type: 'gallery image',
     url:
-      'https://res.cloudinary.com/dglxjd018/image/upload/v1597029940/pls/gallery/workingOnBoard1_hf38t8.jpg',
+      'https://res.cloudinary.com/dglxjd018/image/upload/v1597698418/PreLawSociety/Gallery/Gallery_Group_Photo_In_Front_Of_Bulletin_qc358n.jpg',
     caption: 'Group photo in front of our bulletin board!',
   },
   {
     type: 'gallery image',
     url:
-      'https://res.cloudinary.com/dglxjd018/image/upload/v1596869345/pls/gallery/gallery_groupPicture_voez71.png',
+      'https://res.cloudinary.com/dglxjd018/image/upload/v1597698418/PreLawSociety/Gallery/Gallery_Old_Group_Photo_yfe0cs.jpg',
     caption: 'General body meeting group selfie!',
   },
 ];

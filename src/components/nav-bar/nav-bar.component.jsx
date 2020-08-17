@@ -49,7 +49,7 @@ class NavBar extends React.Component {
           <img
             onClick={this.handleLinkClicked}
             className='logo-img'
-            src='https://res.cloudinary.com/dglxjd018/image/upload/c_scale,h_75/v1596574330/pls/whiteLogo_zbrutt.png'
+            src='https://res.cloudinary.com/dglxjd018/image/upload/v1597698419/PreLawSociety/White_Logo_tboydj.png'
             alt=''
           />
         </Link>
