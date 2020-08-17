@@ -3,9 +3,7 @@ import React from 'react';
 import './card-list.styles.scss';
 import Card from '../card/card.component';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
+
 
 const CardList = ({ cards }) => {
   return (

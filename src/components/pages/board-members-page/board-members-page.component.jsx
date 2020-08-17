@@ -9,9 +9,6 @@ import NavBar from '../../nav-bar/nav-bar.component';
 import SectionTitle from '../../section-title/section-title.component'
 import BoardMemberCard from '../../sections/board-members-page-sections/board-member-card/board-member-card'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
 
 class BoardMembersPage extends React.Component {
   constructor() {
@@ -42,7 +39,7 @@ class BoardMembersPage extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className='board-members-page'>
         <NavBar />
         <div className='main-container'>
           <SectionTitle title='Meet The Board' />

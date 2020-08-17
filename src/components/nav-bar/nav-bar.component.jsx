@@ -14,12 +14,17 @@ class NavBar extends React.Component {
       { open: !this.state.open, linkFade: !this.state.linkFade },
       () => {
         // i dont want the user to scroll while in the nav screen
+        const body = document.body
         if (this.state.open) {
-          document.querySelector('body').style.overflowY = 'hidden';
-          document.querySelector('body').style.position = 'fixed';
+
+          body.style.overflowY = 'hidden';
+          body.style.position = 'fixed';
+          body.style.width = '100%';
+
+
         } else {
-          document.querySelector('body').style.overflowY = 'scroll';
-          document.querySelector('body').style.position = 'relative';
+          body.style.overflowY = 'scroll';
+          body.style.position = 'relative';
         }
       }
     );

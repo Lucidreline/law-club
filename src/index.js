@@ -6,6 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
