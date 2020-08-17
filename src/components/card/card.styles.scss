@@ -51,9 +51,15 @@
         font-weight: 600;
         color: #ffd600;
       }
-      p.link {
+      a.link{
+        color:white !important;
+        text-decoration: none !important;
+        outline-color: red !important;
+      }
+      p.link-text {
         font-size: 2rem;
         color: white;
+        
 
         &:hover {
           text-decoration: underline;
