@@ -7,7 +7,7 @@ const EventsPage = () => {
     <div>
       <NavBar />
       {/* eslint-disable-next-line */}
-      <h3>🚧 Under Construction!👷‍♂ 🚧</h3>
+      <h1 style={{ textAlign: 'center' }} >🚧 Under Construction!👷‍♂ 🚧</h1>
     </div>
   );
 };

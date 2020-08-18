@@ -1,0 +1,63 @@
+ .custom-input{
+   width: 50%;
+   position: relative;
+   height: 6rem;
+   overflow: hidden;
+   margin: 1.25rem auto 0 auto;
+
+   input{
+     width: 100%;
+     height: 100%;
+     padding: 2rem 0 0.5rem 0;
+     border: none;
+     color: black;
+     outline: none;
+     font-size: 1.6rem;
+
+
+     &:focus + label span,
+     &:valid + label span {
+      color: #c4a300;
+      transform: translateY(-3rem);
+     }
+
+     &:focus + label::after, &:valid + label::after{
+       transform: translateX(0%);
+     }
+   }
+
+   label{
+     position: absolute;
+     bottom: 0rem;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     border-bottom: 1px solid black;
+     
+     &::after{
+         content: "";
+         position: absolute;
+         bottom: -1px;
+         left: 0%;
+         height: 100%;
+         height: 100%;
+         width: 100%;
+         border-bottom: 3px solid #c4a300;
+         transform: translateX(-100%);
+         transition: all 0.3s ease;
+       }
+
+       span{
+         color: #c4a300;
+         position: absolute;
+         bottom: 0.4rem;
+         left: 0px;
+         transition: all 0.3s ease;
+       }
+
+     
+   }
+  }
+
+ 
