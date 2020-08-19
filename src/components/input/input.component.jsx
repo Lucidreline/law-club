@@ -2,14 +2,38 @@ import React from 'react';
 
 import './input.styles.scss'
 
-const Input = ({ name, placeholder, handleChange }) => {
-  return (
-    <div className='custom-input'>
+const Input = ({ name, placeholder, handleChange, type }) => {
+  const customTextInput =
+    <div className='custom-text-input'>
       <input onChange={handleChange} autoComplete='off' type='text' name={name} required />
       <label for={name}  >
         <span >{placeholder}</span>
       </label>
     </div>
+
+  const customTextArea =
+    <div className='custom-text-area'>
+      <textarea onChange={handleChange} name={name} required></textarea>
+      <label for={name}  >
+        <span >{placeholder}</span>
+      </label>
+    </div>
+
+  let customInput;
+
+  if (type === 'text') {
+    customInput = customTextInput
+  }
+  else if (type === 'textArea') {
+    customInput = customTextArea
+  }
+  else {
+    customInput = <h3>Invalid Input Type</h3>
+  }
+
+
+  return (
+    customInput
   );
 };
 

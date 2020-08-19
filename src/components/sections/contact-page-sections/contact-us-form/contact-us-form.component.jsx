@@ -31,8 +31,9 @@ class ContactUsForm extends Component {
     return (
       <div className='contact-us-form'>
         <form onSubmit={this.handleSubmit}>
-          <Input name='name' placeholder='Name' handleChange={this.handleChange} />
-          <Input name='email' placeholder='Email' handleChange={this.handleChange} />
+          <Input type='text' name='name' placeholder='Name' handleChange={this.handleChange} />
+          <Input type='text' name='email' placeholder='Email' handleChange={this.handleChange} />
+          <Input type='textArea' name='message' placeholder='Message' handleChange={this.handleChange} />
         </form>
       </div>
     );
