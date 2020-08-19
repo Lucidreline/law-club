@@ -17,6 +17,11 @@ class ContactUsForm extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value }); // if name = email, then {email: value}, etc. So it can be dynamic
+
+    if (e.target.value.trim() !== '')
+      e.target.classList.add('valid')
+    else
+      e.target.classList.remove('valid')
   }
 
   handleSubmit = (e) => {

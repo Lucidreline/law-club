@@ -13,7 +13,7 @@
     font-size: 1.6rem;
 
     &:focus+label span,
-    &:valid+label span {
+    &.valid+label span {
       color: #c4a300;
     }
   }
@@ -54,12 +54,12 @@
     padding: 2rem 0 0 2rem;
 
     &:focus+label span,
-    &:valid+label span {
+    &.valid+label span {
       transform: translateY(-3rem);
     }
 
     &:focus+label::after,
-    &:valid+label::after {
+    &.valid+label::after {
       transform: translateX(0%);
     }
   }
@@ -82,23 +82,24 @@
 
 .custom-text-area {
   margin: 5rem auto 0 auto;
+  min-height: 13rem;
 
   textarea {
     resize: none;
-    padding: 0.5rem 0 0 2rem;
+    padding: 0.9rem 0 0 2rem;
 
     &:focus+label span,
-    &:valid+label span {
+    &.valid+label span {
       transform: translateY(-3rem);
     }
 
     &:focus+label,
-    &:valid+label {
+    &.valid+label {
       border: none;
     }
 
     &:focus+label::after,
-    &:valid+label::after {
+    &.valid+label::after {
       opacity: 1;
     }
   }
