@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../../../input/input.component';
+import Btn from '../../../btn/btn.component'
 
 import './contact-us-form.styles.scss'
 
@@ -26,10 +27,20 @@ class ContactUsForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    e.target.reset()
 
     // validate data
     // send via sendgrid
-    // clear state
+    const { name, email, message } = this.state
+    const msg = {
+      name,
+      email,
+      message
+    }
+    console.log('sending: ' + msg.name, msg.email, msg.message)
+
+
+    this.setState({ name: '', email: '', message: '' })
   }
 
   render() {
@@ -39,6 +50,9 @@ class ContactUsForm extends Component {
           <Input type='text' name='name' placeholder='Name' handleChange={this.handleChange} />
           <Input type='text' name='email' placeholder='Email' handleChange={this.handleChange} />
           <Input type='textArea' name='message' placeholder='Message' handleChange={this.handleChange} />
+          <Btn type='submit' color='orange' >
+            Send
+          </Btn>
         </form>
       </div>
     );

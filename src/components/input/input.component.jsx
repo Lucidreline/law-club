@@ -6,7 +6,7 @@ const Input = ({ name, placeholder, handleChange, type }) => {
   const customTextInput =
     <div className='custom-text-input'>
       <input onChange={handleChange} autoComplete='off' type='text' name={name} />
-      <label for={name}  >
+      <label htmlFor={name}  >
         <span >{placeholder}</span>
       </label>
     </div>
@@ -14,7 +14,7 @@ const Input = ({ name, placeholder, handleChange, type }) => {
   const customTextArea =
     <div className='custom-text-area'>
       <textarea onChange={handleChange} name={name}></textarea>
-      <label for={name}  >
+      <label htmlFor={name}  >
         <span >{placeholder}</span>
       </label>
     </div>
