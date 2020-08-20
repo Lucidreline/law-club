@@ -13,8 +13,10 @@
     transition: all 0.3s ease;
 
     &:hover {
+      scale: 1.025;
       background: #c4a300;
       color: white;
+      box-shadow: -3px 4px 5px rgba(0, 0, 0, 0.35);
     }
 
   }
