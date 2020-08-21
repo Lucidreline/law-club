@@ -1,0 +1,108 @@
+nav#nav-bar {
+  height: 3.5rem;
+  position: relative;
+  margin-bottom: 5.5rem;
+
+  .hamburger {
+    display: none;
+  }
+  .logo-img {
+    position: absolute;
+    margin-left: 4.5%;
+    top: 0.5rem;
+    height: 7.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: auto;
+    padding-top: 3.75rem;
+    margin-right: 5%;
+    width: 60%;
+    height: 100%;
+
+    .nav-link {
+      margin-left: 2rem;
+      font-size: 1.8rem;
+
+      &.active {
+        a {
+          border-bottom: white 2px solid;
+        }
+      }
+
+      a {
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  nav#nav-bar {
+    position: relative;
+
+    i.hamburger {
+      display: block;
+      z-index: 21;
+      font-size: 2.75rem;
+      color: white;
+      position: absolute;
+      cursor: pointer;
+      right: 8%;
+      top: 70%;
+    }
+    .nav-links {
+      position: fixed;
+      background: #c4a300;
+      z-index: 20;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 30% 0 70%;
+      clip-path: circle(110px at 130% -15%);
+      -webkit-clip-path: circle(110px at 130% -15%);
+      transition: all 0.8s ease-out;
+      pointer-events: none;
+
+      .nav-link {
+        opacity: 0;
+        margin-left: 0;
+        font-size: 2.6rem;
+
+        &.active {
+          a {
+            border-bottom: none;
+          }
+        }
+
+        $i: 0;
+        @for $i from 0 to 7 {
+          &:nth-child(#{$i}) {
+            transition: all 0.5s ease #{($i * 0.15) + 0.05}s;
+          }
+        }
+
+        &.fade {
+          opacity: 1;
+          scale: 1.5;
+        }
+      }
+
+      &.open {
+        pointer-events: all;
+        clip-path: circle(1600px at 120% -15%);
+        -webkit-clip-path: circle(1600px at 120% -15%);
+      }
+    }
+  }
+}
