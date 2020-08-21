@@ -55,19 +55,23 @@ class ContactUsForm extends Component {
   }
 
   sendEmail = (_name, _email, _message) => {
+    const userInfo = {
+      name: _name,
+      email: _email,
+      msg: _message
 
-    // const email = {
-    //   to: 'ma52castaneda@gmail.com',
-    //   from: 'ma52castaneda@gmail.com',
-    //   subject: 'Website Message',
-    //   text: `
-    //   From: ${_name}\n
-    //   Email: ${_email}\n
-    //   Message: ${_message}\n
-    //   `
-    // }
+    }
 
-    // send this as a post request to back ends
+    fetch('http://localhost:3010/email', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userInfo)
+    })
+
+
   }
 
 
