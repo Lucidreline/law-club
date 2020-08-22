@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 import Input from '../../../input/input.component';
 import Btn from '../../../btn/btn.component'
@@ -10,6 +11,7 @@ class ContactUsForm extends Component {
   constructor() {
     super()
     this.state = {
+      emailSent: false,
       name: '',
       email: '',
       message: ''
@@ -69,7 +71,7 @@ class ContactUsForm extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(userInfo)
-    })
+    }).then(this.setState({ emailSent: true }))
 
 
   }
@@ -77,17 +79,40 @@ class ContactUsForm extends Component {
 
 
   render() {
+    const inputs =
+      <form onSubmit={this.handleSubmit}>
+        <h2 className='form-title'>Send us an Email!</h2>
+        <Input type='text' name='name' placeholder='Name' handleChange={this.handleChange} />
+        <Input type='text' name='email' placeholder='Email' handleChange={this.handleChange} />
+        <Input type='textArea' name='message' placeholder='Message' handleChange={this.handleChange} />
+        <Btn type='submit' color='orange' >
+          Send
+        </Btn>
+      </form>
+
+    const receipt =
+      <div className='email-receipt'>
+        <h2>Your Email Was Sent!</h2>
+        <i className="fas fa-paper-plane"></i>
+        <p className='msg'>We will get back to you as soon as possible!</p>
+        <p className='thank-you'>Thank you!</p>
+        <Link to='/home' className='text-decoration-none'>
+          <Btn>Return Home</Btn>
+        </Link>
+      </div>
+
+
+    let contentToShow;
+
+    if (this.state.emailSent) {
+      contentToShow = receipt
+    } else {
+      contentToShow = inputs
+    }
+
     return (
       <div className='contact-us-form'>
-        <form onSubmit={this.handleSubmit}>
-          <h2 className='form-title'>Send us an Email!</h2>
-          <Input type='text' name='name' placeholder='Name' handleChange={this.handleChange} />
-          <Input type='text' name='email' placeholder='Email' handleChange={this.handleChange} />
-          <Input type='textArea' name='message' placeholder='Message' handleChange={this.handleChange} />
-          <Btn type='submit' color='orange' >
-            Send
-          </Btn>
-        </form>
+        {contentToShow}
       </div>
     );
   }
