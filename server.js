@@ -13,21 +13,21 @@ app.use(cors(require('./config/cors')))
 
 app.post('/email', (req, res) => {
 
-  // try {
-  //   sgMail.setApiKey(config.get('SendGridKey'));
-  //   const { name, email, msg } = req.body;
-  //   const emailToSend = {
-  //     to: config.get('ClientEmail'),
-  //     from: config.get('ClientEmail'),
-  //     subject: 'PLS Website Message',
-  //     text: `Name: ${name}\nEmail: ${email}\nMessage: ${msg}`
-  //   }
-  //   sgMail.send(emailToSend);
+  try {
+    sgMail.setApiKey(config.get('SendGridKey'));
+    const { name, email, msg } = req.body;
+    const emailToSend = {
+      to: config.get('ClientEmail'),
+      from: config.get('ClientEmail'),
+      subject: 'PLS Website Message',
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${msg}`
+    }
+    sgMail.send(emailToSend);
 
-  // } catch (err) {
+  } catch (err) {
 
-  //   console.log(err)
-  // }
+    console.log(err)
+  }
 
 })
 
