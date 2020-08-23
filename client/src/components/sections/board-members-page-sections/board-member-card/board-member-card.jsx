@@ -17,6 +17,7 @@ const BoardMemberCard = ({ boardMember, index }) => {
     <div className='bio-side'>
       <div className="name-container header-containers">
         <h3 className='name'>{boardMember.firstName} {boardMember.lastName}</h3>
+        <h3 className='responsive-position'>{boardMember.position}</h3>
       </div>
       <div className="bio-container ">
         <p className="bio">{boardMember.bio} <br /> <br /> <span className='fun-fact'>  Fun Fact:</span>  {boardMember.funFact}</p>
