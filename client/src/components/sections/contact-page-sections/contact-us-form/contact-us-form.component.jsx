@@ -97,7 +97,7 @@ class ContactUsForm extends Component {
         <p className='msg'>We will get back to you as soon as possible!</p>
         <p className='thank-you'>Thank you!</p>
         <Link to='/home' className='text-decoration-none'>
-          <Btn>Return Home</Btn>
+          <Btn >Return Home</Btn>
         </Link>
       </div>
 

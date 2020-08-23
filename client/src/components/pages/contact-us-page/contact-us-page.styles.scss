@@ -1,0 +1,63 @@
+.contact-us-page {
+  position: relative;
+
+
+  .form-container {
+    position: relative;
+    z-index: 10;
+  }
+
+  .icon {
+    height: 5rem;
+    width: 5rem;
+    z-index: 0;
+
+    position: absolute;
+
+    &.hammer {
+      background: url(https://res.cloudinary.com/dglxjd018/image/upload/v1598122566/PreLawSociety/hammerIcon_xdmmls.png);
+      background-size: cover;
+      top: 26%;
+      left: 10%;
+      animation: moveLeft 23s ease infinite alternate;
+      scale: 1.05;
+    }
+
+    &.scale {
+      background: url(https://res.cloudinary.com/dglxjd018/image/upload/v1598122566/PreLawSociety/scaleIcon_voaeyj.png);
+      background-size: cover;
+      top: 60%;
+      right: 13%;
+      animation: moveRight 36s ease infinite alternate;
+    }
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .icon.hammer,
+  .icon.scale {
+    display: none;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%)
+  }
+
+  100% {
+    transform: translateX(-170%)
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0%)
+  }
+
+  100% {
+    transform: translateX(50%)
+  }
+}

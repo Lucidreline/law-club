@@ -25,7 +25,6 @@ app.post('/email', (req, res) => {
     sgMail.send(emailToSend);
 
   } catch (err) {
-
     console.log(err)
   }
 

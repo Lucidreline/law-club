@@ -18,8 +18,9 @@ class ContactUsPage extends React.Component {
     return (
       <div className='contact-us-page'>
         <NavBar />
-        {/* eslint-disable-next-line */}
-        <h1 style={{ textAlign: 'center' }} >🚧 Under Construction!👷‍♂ 🚧</h1>
+        <div className="icon hammer"></div>
+        <div className="icon scale"></div>
+        <div className="icon book"></div>
         <div className="form-container">
           <ContactUsForm />
         </div>
