@@ -4,10 +4,12 @@ import Hero from '../../sections/home-page-sections/hero/hero.component';
 import Events from '../../sections/home-page-sections/events/events.component';
 import MeetTheBoard from '../../sections/home-page-sections/meet-the-board/meet-the-board.component';
 import Gallery from '../../sections/home-page-sections/gallery/gallery.component';
+import JudgeSvg from '../../judge-svg/judge-svg';
 
 const HomePage = () => {
   return (
     <div>
+      <JudgeSvg />
       <Hero />
       <div className='main-container'>
         <Events />

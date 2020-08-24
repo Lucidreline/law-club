@@ -1,0 +1,51 @@
+.judge-svg {
+  svg {
+    scale: 0.5;
+
+    #head {
+      animation: bopHead 2.5s ease-out infinite alternate backwards;
+    }
+
+    #plant #plantHead {
+      animation: swishPlant 1.5s ease-in-out infinite alternate backwards;
+      transform-origin: bottom;
+      transform-box: fill-box;
+    }
+
+    #hammer {
+      animation: hammerRotate 1.5s ease-in-out infinite alternate backwards;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+  }
+}
+
+@keyframes bopHead {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  100% {
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes swishPlant {
+  0% {
+    transform: rotateZ(-4deg);
+  }
+
+  100% {
+    transform: rotateZ(4deg);
+  }
+}
+
+@keyframes hammerRotate {
+  0% {
+    transform: rotateZ(5deg);
+  }
+
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
