@@ -1,24 +1,27 @@
-.judge-svg {
-  svg {
-    scale: 0.5;
+svg {
+  height: 100%;
+  max-width: 50rem;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
 
-    #head {
-      animation: bopHead 2.5s ease-out infinite alternate backwards;
-    }
+  #head {
+    animation: bopHead 2.5s ease-out infinite alternate backwards;
+  }
 
-    #plant #plantHead {
-      animation: swishPlant 1.5s ease-in-out infinite alternate backwards;
-      transform-origin: bottom;
-      transform-box: fill-box;
-    }
+  #plant #plantHead {
+    animation: swishPlant 1.5s ease-in-out infinite alternate backwards;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
 
-    #hammer {
-      animation: hammerRotate 1.5s ease-in-out infinite alternate backwards;
-      transform-origin: center;
-      transform-box: fill-box;
-    }
+  #hammer {
+    animation: hammerRotate 1.5s ease-in-out infinite alternate backwards;
+    transform-origin: center;
+    transform-box: fill-box;
   }
 }
+
 
 @keyframes bopHead {
   0% {

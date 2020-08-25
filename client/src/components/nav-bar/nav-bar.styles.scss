@@ -6,6 +6,7 @@ nav#nav-bar {
   .hamburger {
     display: none;
   }
+
   .logo-img {
     position: absolute;
     margin-left: 4.5%;
@@ -26,16 +27,24 @@ nav#nav-bar {
     .nav-link {
       margin-left: 2rem;
       font-size: 1.8rem;
+      transition: 0.3s;
 
       &.active {
         a {
-          border-bottom: white 2px solid;
+          border-bottom: black 2px solid;
+
+          &:hover {
+            border-color: #c4a300 !important;
+          }
         }
+
       }
 
       a {
-        color: white;
+        color: black;
+
         &:hover {
+          color: #c4a300 !important;
           text-decoration: none;
         }
       }
@@ -46,6 +55,7 @@ nav#nav-bar {
     }
   }
 }
+
 @media screen and (max-width: 890px) {
   nav#nav-bar {
     position: relative;
@@ -54,12 +64,13 @@ nav#nav-bar {
       display: block;
       z-index: 21;
       font-size: 2.75rem;
-      color: white;
+      color: black;
       position: absolute;
       cursor: pointer;
       right: 8%;
       top: 70%;
     }
+
     .nav-links {
       position: fixed;
       background: #c4a300;
@@ -86,6 +97,7 @@ nav#nav-bar {
         }
 
         $i: 0;
+
         @for $i from 0 to 7 {
           &:nth-child(#{$i}) {
             transition: all 0.5s ease #{($i * 0.15) + 0.05}s;
