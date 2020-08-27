@@ -56,3 +56,113 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  #hero svg {
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #hero {
+    svg {
+      scale: 0.7;
+    }
+
+    .hero-content .text .text-content {
+      h1.title {
+        font-size: 4.5rem;
+      }
+
+      p.subtitle,
+      button {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #hero {
+    svg {
+      scale: 0.7;
+    }
+
+    .hero-content .text .text-content {
+      h1.title {
+        font-size: 4.25rem;
+      }
+
+      p.subtitle,
+      button {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #hero {
+    .hero-content {
+      flex-wrap: wrap;
+
+      .text {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+
+        .text-content {
+          text-align: center;
+          width: 60%;
+          position: relative;
+          margin: auto;
+
+          h1.title {
+            font-size: 4.25rem;
+          }
+
+          p.subtitle,
+          .btns .btn-container button {
+            font-size: 1.75rem;
+          }
+
+          .btns {
+            display: inline;
+          }
+        }
+      }
+
+      svg {
+        display: none
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #hero .hero-content .text .text-content {
+    top: 30%;
+
+    h1.title {
+      font-size: 3.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.25rem;
+    }
+
+    .btns .btn-container button {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-height: 360px) {
+  #hero .hero-content .text .text-content {
+    top: 22.5%;
+
+    .btns {
+      display: none;
+    }
+  }
+}

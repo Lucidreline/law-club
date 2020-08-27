@@ -15,16 +15,19 @@ class NavBar extends React.Component {
       () => {
         // i dont want the user to scroll while in the nav screen
         const body = document.body
+        const hamburger = document.getElementById('hamburgerNavIcon')
         if (this.state.open) {
 
           body.style.overflowY = 'hidden';
           body.style.position = 'fixed';
           body.style.width = '100%';
+          hamburger.style.color = 'white'
 
 
         } else {
           body.style.overflowY = 'scroll';
           body.style.position = 'relative';
+          hamburger.style.color = 'black'
         }
       }
     );
@@ -42,7 +45,8 @@ class NavBar extends React.Component {
       <nav id='nav-bar'>
         <i
           onClick={this.openCloseHambMenu}
-          className='fas fa-bars hamburger'
+          id='hamburgerNavIcon'
+          className={`fas fa-bars hamburger`}
         ></i>
 
         <Link to='/home' >

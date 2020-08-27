@@ -56,7 +56,7 @@ nav#nav-bar {
   }
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 920px) {
   nav#nav-bar {
     position: relative;
 
@@ -69,6 +69,9 @@ nav#nav-bar {
       cursor: pointer;
       right: 8%;
       top: 70%;
+      transition: 0.8s;
+
+
     }
 
     .nav-links {
@@ -89,6 +92,15 @@ nav#nav-bar {
         opacity: 0;
         margin-left: 0;
         font-size: 2.6rem;
+
+        a {
+          color: white;
+
+          &:hover {
+            color: white !important;
+          }
+        }
+
 
         &.active {
           a {
