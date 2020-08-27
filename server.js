@@ -4,6 +4,8 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const sgMail = require('@sendgrid/mail');
 
+const path = require('path')
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -29,5 +31,16 @@ app.post('/email', (req, res) => {
   }
 
 })
+
+// serve static assets in prod
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV === 'production') {
+  // set static folder
+  app.use(express.static('client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 app.listen(config.get('Port'), () => console.log(`Backend online on port ${config.get('Port')}`))

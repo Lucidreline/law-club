@@ -1,7 +1,168 @@
 #hero {
   height: 100vh;
-  background: url(https://res.cloudinary.com/dglxjd018/image/upload/v1597698422/PreLawSociety/Hero_Background_g4glyq.png);
+  background: url(https://res.cloudinary.com/dglxjd018/image/upload/o_20/v1598304876/PreLawSociety/Hero_Background_suypd1.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
+
+  .hero-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+
+
+    .text {
+      width: 50%;
+      height: 100%;
+      margin-left: 4.5%;
+      padding-left: 11px;
+      position: relative;
+
+      .text-content {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 60%;
+
+        .title {
+          font-weight: 600;
+          font-size: 5rem;
+          color: #c4a300;
+          text-shadow: -1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+          font-size: 2.5rem;
+        }
+
+        .btns {
+          .btn-container button {
+            font-size: 2.5rem;
+          }
+
+          display: flex;
+        }
+      }
+    }
+
+
+    .svg-container {
+      height: 95vh;
+      width: 50%;
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #hero svg {
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #hero {
+    svg {
+      scale: 0.7;
+    }
+
+    .hero-content .text .text-content {
+      h1.title {
+        font-size: 4.5rem;
+      }
+
+      p.subtitle,
+      button {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #hero {
+    svg {
+      scale: 0.7;
+    }
+
+    .hero-content .text .text-content {
+      h1.title {
+        font-size: 4.25rem;
+      }
+
+      p.subtitle,
+      button {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #hero {
+    .hero-content {
+      flex-wrap: wrap;
+
+      .text {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+
+        .text-content {
+          text-align: center;
+          width: 60%;
+          position: relative;
+          margin: auto;
+
+          h1.title {
+            font-size: 4.25rem;
+          }
+
+          p.subtitle,
+          .btns .btn-container button {
+            font-size: 1.75rem;
+          }
+
+          .btns {
+            display: inline;
+          }
+        }
+      }
+
+      svg {
+        display: none
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #hero .hero-content .text .text-content {
+    top: 30%;
+
+    h1.title {
+      font-size: 3.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.25rem;
+    }
+
+    .btns .btn-container button {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-height: 360px) {
+  #hero .hero-content .text .text-content {
+    top: 22.5%;
+
+    .btns {
+      display: none;
+    }
+  }
 }

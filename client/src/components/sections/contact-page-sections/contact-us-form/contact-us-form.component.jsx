@@ -85,7 +85,7 @@ class ContactUsForm extends Component {
         <Input type='text' name='name' placeholder='Name' handleChange={this.handleChange} />
         <Input type='text' name='email' placeholder='Email' handleChange={this.handleChange} />
         <Input type='textArea' name='message' placeholder='Message' handleChange={this.handleChange} />
-        <Btn type='submit' color='orange' >
+        <Btn className='needs-margin-top' type='submit' color='orange' >
           Send
         </Btn>
       </form>
@@ -97,7 +97,7 @@ class ContactUsForm extends Component {
         <p className='msg'>We will get back to you as soon as possible!</p>
         <p className='thank-you'>Thank you!</p>
         <Link to='/home' className='text-decoration-none'>
-          <Btn >Return Home</Btn>
+          <Btn className='needs-margin-top'>Return Home</Btn>
         </Link>
       </div>
 

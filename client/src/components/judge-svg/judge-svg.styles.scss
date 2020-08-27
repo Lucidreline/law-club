@@ -1,0 +1,46 @@
+svg {
+  height: 100%;
+  max-width: 50rem;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+
+  #head {
+    animation: headPlantSwish 1.5s ease-in-out infinite alternate backwards;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+
+  #plant #plantHead {
+    animation: headPlantSwish 1.5s ease-in-out infinite alternate backwards;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+
+  #hammer {
+    animation: hammerRotate 1.5s ease-in-out infinite alternate backwards;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}
+
+
+@keyframes headPlantSwish {
+  0% {
+    transform: rotateZ(-4deg);
+  }
+
+  100% {
+    transform: rotateZ(4deg);
+  }
+}
+
+@keyframes hammerRotate {
+  0% {
+    transform: rotateZ(5deg);
+  }
+
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
