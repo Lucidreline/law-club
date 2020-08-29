@@ -21,12 +21,20 @@ class EventsPage extends React.Component {
     dynamicHrefScrollJump();
   }
 
+  createEndDate = ({ year, month, day, endTime }) => {
+    let date = new Date(year, month - 1, day)
+    date.setHours(endTime.hour)
+    date.setMinutes(endTime.minute)
+    return date;
+  }
+
   render() {
     // creates a list of past and future events
     let pastEvents = [];
     let futureEvents = [];
+    const today = new Date()
     this.state.events.forEach(event => {
-      if (event.alreadyPast) {
+      if (today > this.createEndDate(event.date)) {
         pastEvents.push(event)
       }
       else {
