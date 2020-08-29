@@ -3,10 +3,10 @@ import React from 'react';
 import Btn from '../../../btn/btn.component'
 
 import './event-card.styles.scss'
-import { stringifyTime, stringifyDate, createEndDate } from './time.utils'
+import { stringifyTime, stringifyDate } from './time.utils'
 
 const EventCard = ({ event }) => {
-  const { id, name, image, date, location } = event;
+  const { id, name, image, date, location, toroLink } = event;
 
 
   const photoSide =
@@ -27,7 +27,7 @@ const EventCard = ({ event }) => {
         <p className="time">{`${stringifyTime(date.startTime)} - ${stringifyTime(date.endTime)}`}</p>
         <p className="location">{location}</p>
       </div>
-      <a href="" className="event-toro-link text-decoration-none">
+      <a rel="noopener noreferrer" target='_blank' href={toroLink} className="event-toro-link text-decoration-none">
         <Btn>Sign Up!</Btn>
       </a>
     </div>

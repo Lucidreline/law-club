@@ -18,7 +18,8 @@ const events = [
         minute: 0
       }
     },
-    location: "LSU Ballroom B"
+    location: "LSU Ballroom B",
+    toroLink: "https://torolink.csudh.edu/organization/pre-lawsociety"
   },
   {
     id: '1',
@@ -39,7 +40,9 @@ const events = [
         minute: 0
       }
     },
-    location: "1910 Cafe"
+    location: "1910 Cafe",
+    toroLink: "https://torolink.csudh.edu/organization/pre-lawsociety"
+
   },
 ];
 

@@ -55,7 +55,17 @@ $base-font-size: 2.5rem;
       }
 
       .description {
-        font-size: $base-font-size;
+        font-size: $base-font-size - 0.15rem;
+      }
+
+      .info p.time,
+      .info p.date,
+      .info p.location {
+        font-size: $base-font-size - 0.5rem;
+      }
+
+      .info p.location {
+        font-weight: 600;
       }
 
       .btn-container button {
@@ -63,5 +73,122 @@ $base-font-size: 2.5rem;
       }
 
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  $base-font-size: 2.1rem;
+
+  .event-card .card-content .description-side {
+
+    .event-name {
+      font-size: $base-font-size + 1.5rem;
+      font-weight: 600;
+      color: $themeColor;
+    }
+
+    .description {
+      font-size: $base-font-size - 0.15rem;
+    }
+
+    .info p.time,
+    .info p.date,
+    .info p.location {
+      font-size: $base-font-size - 0.75rem;
+    }
+
+    .info p.location {
+      font-weight: 600;
+    }
+
+    .btn-container button {
+      font-size: $base-font-size;
+    }
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  $base-font-size: 1.7rem;
+
+  .event-card {
+    padding: 0;
+    width: 70%;
+
+    .card-content {
+      flex-direction: column;
+
+      .photo-side {
+        margin-top: 0;
+        width: 100%;
+        padding: 0;
+
+        .photo {
+          width: 100%;
+          border-top-right-radius: 8px;
+          border-top-left-radius: 8px;
+        }
+
+        .shifted-border {
+          display: none;
+        }
+      }
+
+      .description-side {
+        padding: 3rem 1rem;
+        margin: auto;
+        width: 80%;
+
+        .event-name {
+          font-size: $base-font-size + 1.5rem;
+          font-weight: 600;
+          color: $themeColor;
+        }
+
+        .description {
+          font-size: $base-font-size - 0.15rem;
+        }
+
+        .info p.time,
+        .info p.date,
+        .info p.location {
+          font-size: $base-font-size - 0.5rem;
+        }
+
+        .info p.location {
+          font-weight: 600;
+        }
+
+        .btn-container button {
+          font-size: $base-font-size;
+        }
+      }
+    }
+  }
+}
+
+// i have these subtle 5% changes because I want to try to preserve the portrait image for as long as possible
+// making it 90% right off the bat will make the cut off the top and bottom of the image
+@media screen and (max-width: 800px) {
+  .event-card {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .event-card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .event-card {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .event-card {
+    width: 90%;
   }
 }
