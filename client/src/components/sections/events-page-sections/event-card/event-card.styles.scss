@@ -1,0 +1,67 @@
+$themeColor: #ffd600;
+$border-offset: 1.5rem;
+$base-font-size: 2.5rem;
+
+.event-card {
+  margin: 8rem auto;
+  width: 90%;
+  max-width: 120rem;
+  box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 3rem;
+
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+
+    .photo-side {
+      position: relative;
+      height: 50rem;
+      width: 38.5rem;
+      margin: $border-offset $border-offset 0 0;
+
+      .photo {
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .shifted-border {
+        position: absolute;
+        z-index: 0;
+        transform: translate($border-offset, -$border-offset);
+        border: $themeColor solid 4px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .description-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;
+      text-align: center;
+      padding: 0rem 5rem;
+
+      .event-name {
+        font-size: $base-font-size + 1.5rem;
+        font-weight: 600;
+        color: $themeColor;
+      }
+
+      .description {
+        font-size: $base-font-size;
+      }
+
+      .btn-container button {
+        font-size: $base-font-size;
+      }
+
+    }
+  }
+}
