@@ -24,8 +24,8 @@ class BoardMembersPage extends React.Component {
     window.scrollTo(0, 0);
     dynamicHrefScrollJump();
   }
-  render() {
 
+  render() {
     return (
       <div className='board-members-page'>
         <NavBar />

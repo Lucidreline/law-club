@@ -5,6 +5,7 @@ const events = [
     name: 'Latinos Changing America',
     image:
       'https://res.cloudinary.com/dglxjd018/image/upload/v1597698418/PreLawSociety/Events/Events_Latinos_Changing_America_o5vapd.jpg',
+    alreadyPast: true
   },
   {
     id: '1',
@@ -12,6 +13,7 @@ const events = [
     name: 'Immigration Speaking Event',
     image:
       'https://res.cloudinary.com/dglxjd018/image/upload/v1597698416/PreLawSociety/Events/Events_Immigration_Speaking_Event_yn8ewu.jpg',
+    alreadyPast: true
   },
 ];
 
