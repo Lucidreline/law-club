@@ -1,5 +1,4 @@
 import React from 'react';
-import jump from 'jump.js'
 
 import './board-members-page.styles.scss'
 
@@ -9,6 +8,7 @@ import NavBar from '../../nav-bar/nav-bar.component';
 import SectionTitle from '../../section-title/section-title.component'
 import BoardMemberCard from '../../sections/board-members-page-sections/board-member-card/board-member-card'
 
+import { dynamicHrefScrollJump } from '../../../utils'
 
 class BoardMembersPage extends React.Component {
   constructor() {
@@ -19,22 +19,10 @@ class BoardMembersPage extends React.Component {
     }
   }
 
-  handleScrollJump = () => {
-    const splitUrl = window.location.href.split('/')
-    if (splitUrl.length > 4) {
-      //href contains a url
-      jump(`#id-${splitUrl[4]}`, {
-        offset: -120,
-        duration: 2000
-      })
-    }
-  }
-
   componentDidMount() {
     // starts the page off at the top
     window.scrollTo(0, 0);
-    this.handleScrollJump()
-
+    dynamicHrefScrollJump();
   }
   render() {
 
