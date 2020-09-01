@@ -14,6 +14,7 @@ const HomePage = () => {
         <MeetTheBoard />
         <Gallery />
       </div>
+
     </div>
   );
 };

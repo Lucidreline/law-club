@@ -7,6 +7,7 @@ import BoardMembersPage from './components/pages/board-members-page/board-member
 import EventsPage from './components/pages/events-page/events-page.component'
 import ContactUsPage from './components/pages/contact-us-page/contact-us-page.component';
 import AboutUsPage from './components/pages/about-us-page/about-us-page.component';
+import Footer from './components/sections/footer/footer.component';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/contact' component={ContactUsPage} />
         <Route exact path='/about' component={AboutUsPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }

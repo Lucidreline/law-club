@@ -1,0 +1,58 @@
+#footer {
+  background: #c4a300;
+  color: white;
+  font-size: 1.3rem;
+  box-shadow: #c4a300 0 11rem;
+  padding: 3rem 0;
+
+  a {
+    color: white;
+  }
+
+  .intro span.mission,
+  .copyright,
+  .link-item,
+  .phone-number {
+    opacity: 0.8;
+  }
+
+  .link-item:hover {
+    text-decoration: underline !important;
+  }
+
+
+  .footer-container {
+    width: 90%;
+    margin: auto;
+
+    .footer-collumns {
+      display: flex;
+      flex-wrap: wrap;
+
+      .collumn {
+        width: 15rem;
+        margin: 0 3rem 3rem 0;
+
+        &.intro {
+
+
+          h3 {
+            font-size: 3rem;
+            font-weight: 700;
+          }
+
+        }
+
+        .small-bold {
+          font-weight: 700;
+
+        }
+
+        .link-item {
+          display: block;
+
+        }
+      }
+    }
+  }
+}
