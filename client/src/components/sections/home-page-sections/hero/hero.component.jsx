@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="text">
           <div className="text-content">
             <h1 className='title'>Pre-Law Society</h1>
-            <p className='subtitle'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugit dicta explicabo culpa excepturi quis neque doloremque placeat?</p>
+            <p className='subtitle'>Paving our way into law school.</p>
             <div className="btns">
               <Link to='contact' className='text-decoration-none'>
                 <Btn className='hero-btn'>Contact Us</Btn>

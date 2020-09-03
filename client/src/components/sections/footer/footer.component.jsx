@@ -13,23 +13,23 @@ const Footer = () => {
         <div className="footer-collumns">
           <div className="collumn intro">
             <h3>Pre-Law Society</h3>
-            <span className='mission'>Some kind of mission statement here to show the world.</span>
+            <span className='mission'>Paving our way into law school!</span>
           </div>
           <div className="collumn explore">
             <span className="small-bold">Explore</span>
-            <Link className="link-item">
+            <Link to='/home' className="link-item">
               Home
           </Link>
-            <Link className="link-item">
+            <Link to='/events' className="link-item">
               Events
           </Link>
-            <Link className="link-item">
+            <Link to='/members' className="link-item">
               Members
           </Link>
-            <Link className="link-item">
+            <Link to='about' className="link-item">
               About Us
           </Link>
-            <Link className="link-item">
+            <Link to='contact' className="link-item">
               Contact Us
           </Link>
           </div>
