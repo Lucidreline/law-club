@@ -17,10 +17,18 @@
     opacity: 0.8;
   }
 
+  a.developer-link {
+    opacity: 1;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
   .link-item:hover {
     text-decoration: underline !important;
   }
-
 
   .footer-container {
     width: 90%;
@@ -35,23 +43,18 @@
         margin: 0 5rem 3rem 0;
 
         &.intro {
-
-
           h3 {
             font-size: 3.5rem;
             font-weight: 700;
           }
-
         }
 
         .small-bold {
           font-weight: 700;
-
         }
 
         .link-item {
           display: block;
-
         }
       }
     }

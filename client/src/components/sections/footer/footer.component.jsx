@@ -82,6 +82,18 @@ const Footer = () => {
           </div>
         </div>
         <p className='copyright'>
+          Developed by{' '}
+          <a
+            className='developer-link text-decoration-none'
+            href='https://manuelc.me'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Manuel Castaneda
+          </a>
+          .
+        </p>
+        <p className='copyright'>
           &#169; {year} Pre-Law Society. All Rights Reserved.
         </p>
       </div>
