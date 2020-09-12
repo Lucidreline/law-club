@@ -16,12 +16,11 @@ nav#nav-bar {
 
   .nav-links {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     margin-left: auto;
     padding-top: 3.75rem;
     margin-right: 5%;
-    width: 60%;
     height: 100%;
 
     .nav-link {
