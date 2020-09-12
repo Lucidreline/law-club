@@ -14,30 +14,27 @@ class NavBar extends React.Component {
       { open: !this.state.open, linkFade: !this.state.linkFade },
       () => {
         // i dont want the user to scroll while in the nav screen
-        const body = document.body
-        const hamburger = document.getElementById('hamburgerNavIcon')
+        const body = document.body;
+        const hamburger = document.getElementById('hamburgerNavIcon');
         if (this.state.open) {
-
           body.style.overflowY = 'hidden';
           body.style.position = 'fixed';
           body.style.width = '100%';
-          hamburger.style.color = 'white'
-
-
+          hamburger.style.color = 'white';
         } else {
           body.style.overflowY = 'scroll';
           body.style.position = 'relative';
-          hamburger.style.color = 'black'
+          hamburger.style.color = 'black';
         }
       }
     );
   };
 
   handleLinkClicked = () => {
-    const body = document.body
+    const body = document.body;
     body.style.overflowY = 'scroll';
     body.style.position = 'relative';
-  }
+  };
 
   render() {
     const url = window.location.href;
@@ -49,7 +46,7 @@ class NavBar extends React.Component {
           className={`fas fa-bars hamburger`}
         ></i>
 
-        <Link to='/home' >
+        <Link to='/home'>
           <img
             onClick={this.handleLinkClicked}
             className='logo-img'
@@ -70,38 +67,35 @@ class NavBar extends React.Component {
         <ul className={`nav-links ${this.state.open ? ' open' : ''}`}>
           <li
             onClick={this.handleLinkClicked}
-            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/home') ? 'active' : ''
-              }`}
+            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${
+              url.includes('/home') ? 'active' : ''
+            }`}
           >
-            <Link to='/home' >Home</Link>
+            <Link to='/home'>Home</Link>
           </li>
           <li
             onClick={this.handleLinkClicked}
-            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/events') ? 'active' : ''
-              }`}
+            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${
+              url.includes('/events') ? 'active' : ''
+            }`}
           >
-            <Link to='/events' >Events</Link>
+            <Link to='/events'>Events</Link>
           </li>
           <li
             onClick={this.handleLinkClicked}
-            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/members') ? 'active' : ''
-              }`}
+            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${
+              url.includes('/members') ? 'active' : ''
+            }`}
           >
-            <Link to='/members' >Members</Link>
+            <Link to='/members'>Members</Link>
           </li>
           <li
             onClick={this.handleLinkClicked}
-            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/about') ? 'active' : ''
-              }`}
+            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${
+              url.includes('/contact') ? 'active' : ''
+            }`}
           >
-            <Link to='/about' >About Us</Link>
-          </li>
-          <li
-            onClick={this.handleLinkClicked}
-            className={`nav-link ${this.state.linkFade ? ' fade' : ''} ${url.includes('/contact') ? 'active' : ''
-              }`}
-          >
-            <Link to='/contact' >Contact Us</Link>
+            <Link to='/contact'>Contact Us</Link>
           </li>
         </ul>
       </nav>

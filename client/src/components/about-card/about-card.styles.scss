@@ -1,0 +1,35 @@
+.about-card {
+  box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  max-width: 100rem;
+  width: 70%;
+  padding: 4rem 6rem;
+  margin: 0 auto 5rem auto;
+  text-align: left;
+
+  &:first-of-type {
+    margin-top: 10rem;
+  }
+
+  &:nth-of-type(2) {
+    text-align: right;
+  }
+
+  &:nth-last-of-type(2)>p.info {
+    margin-left: auto;
+  }
+
+
+
+  h2.card-title {
+    font-size: 4rem;
+    color: #ffd600;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  p.info {
+    width: 80%;
+    line-height: 3rem;
+  }
+}

@@ -33,7 +33,6 @@ class BoardMembersPage extends React.Component {
           <SectionTitle title='Meet The Board' />
           {this.state.boardMembers.map((boardMember, index) => (
             <div data-aos='fade-up'>
-
               <BoardMemberCard boardMember={boardMember} index={index} key={index} />
             </div>
           ))}
