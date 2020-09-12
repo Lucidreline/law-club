@@ -1,0 +1,53 @@
+.value-card {
+  margin: auto;
+  height: 40rem;
+  width: 80rem;
+  position: relative;
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 5rem;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 2.5px 3px,
+    rgba(0, 0, 0, 0.3) -1px 6px 14px;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    scale: 1.025;
+
+    box-shadow: rgba(0, 0, 0, 0.3) -2px 3.5px 4px,
+      rgba(0, 0, 0, 0.3) -2px 7px 15px;
+  }
+
+  .item {
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+
+    .text-container {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 60%;
+
+      border-radius: inherit;
+      text-align: center;
+
+      .number {
+        color: #ffd600;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 8rem;
+      }
+      .text {
+        color: white;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        font-size: 2.25rem;
+      }
+    }
+  }
+}
