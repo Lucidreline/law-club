@@ -5,6 +5,8 @@ const events = [
     name: 'Latinos Changing America',
     image:
       'https://res.cloudinary.com/dglxjd018/image/upload/v1597698418/PreLawSociety/Events/Events_Latinos_Changing_America_o5vapd.jpg',
+    description:
+      'Bacon ipsum dolor amet rump pork belly filet mignon corned beef turducken kevin jowl pig sirloin short loin shank.',
     date: {
       year: 2020,
       month: 3,
@@ -15,11 +17,11 @@ const events = [
       },
       endTime: {
         hour: 21,
-        minute: 0
-      }
+        minute: 0,
+      },
     },
-    location: "LSU Ballroom B",
-    toroLink: "https://torolink.csudh.edu/organization/pre-lawsociety"
+    location: 'LSU Ballroom B',
+    toroLink: 'https://torolink.csudh.edu/organization/pre-lawsociety',
   },
   {
     id: '1',
@@ -27,6 +29,8 @@ const events = [
     name: 'Immigration Speaking Event',
     image:
       'https://res.cloudinary.com/dglxjd018/image/upload/v1597698416/PreLawSociety/Events/Events_Immigration_Speaking_Event_yn8ewu.jpg',
+    description:
+      'Bacon ipsum dolor amet rump pork belly filet mignon corned beef turducken kevin jowl pig sirloin short loin shank.',
     date: {
       year: 2019,
       month: 11,
@@ -37,12 +41,11 @@ const events = [
       },
       endTime: {
         hour: 21,
-        minute: 0
-      }
+        minute: 0,
+      },
     },
-    location: "1910 Cafe",
-    toroLink: "https://torolink.csudh.edu/organization/pre-lawsociety"
-
+    location: '1910 Cafe',
+    toroLink: 'https://torolink.csudh.edu/organization/pre-lawsociety',
   },
 ];
 
