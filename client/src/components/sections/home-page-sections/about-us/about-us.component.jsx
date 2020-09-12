@@ -33,9 +33,7 @@ const AboutUs = () => {
     },
   ];
   return (
-    <div>
-      {/* eslint-disable-next-line */}
-      <h1 style={{ textAlign: 'center' }}>🚧 Under Construction!👷‍♂ 🚧</h1>
+    <div id='about-us'>
       <SectionTitle title='About Us' />
       <Gallery />
 
