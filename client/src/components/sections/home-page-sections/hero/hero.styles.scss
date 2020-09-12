@@ -80,14 +80,14 @@
 
 @media screen and (max-width: 1600px) {
   #hero svg {
-    scale: 0.8;
+    transform: scale(0.8);
   }
 }
 
 @media screen and (max-width: 1400px) {
   #hero {
     svg {
-      scale: 0.7;
+      transform: scale(0.7);
     }
 
     .hero-content .text .text-content {
@@ -124,7 +124,7 @@
 @media screen and (max-width: 1150px) {
   #hero {
     svg {
-      scale: 0.7;
+      transform: scale(0.7);
     }
 
     .hero-content .text .text-content {

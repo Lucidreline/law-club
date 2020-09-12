@@ -1,7 +1,6 @@
 .contact-us-page {
   position: relative;
 
-
   .form-container {
     position: relative;
     z-index: 10;
@@ -20,7 +19,7 @@
       top: 26%;
       left: 10%;
       animation: moveLeft 23s ease infinite alternate;
-      scale: 1.05;
+      transform: scale(1.05);
     }
 
     &.scale {
@@ -31,11 +30,9 @@
       animation: moveRight 36s ease infinite alternate;
     }
   }
-
 }
 
 @media screen and (max-width: 900px) {
-
   .icon.hammer,
   .icon.scale {
     display: none;
@@ -44,20 +41,20 @@
 
 @keyframes moveLeft {
   0% {
-    transform: translateX(0%)
+    transform: translateX(0%);
   }
 
   100% {
-    transform: translateX(-170%)
+    transform: translateX(-170%);
   }
 }
 
 @keyframes moveRight {
   0% {
-    transform: translateX(0%)
+    transform: translateX(0%);
   }
 
   100% {
-    transform: translateX(50%)
+    transform: translateX(50%);
   }
 }

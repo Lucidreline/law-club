@@ -15,7 +15,7 @@
     rgba(0, 0, 0, 0.3) -1px 6px 14px;
 
   &:hover {
-    scale: 1.025;
+    transform: scale(1.025);
     box-shadow: rgba(0, 0, 0, 0.35) -2px 4.5px 5px,
       rgba(0, 0, 0, 0.3) -2px 8px 15px;
     .dark-hover {
@@ -51,15 +51,14 @@
         font-weight: 600;
         color: #ffd600;
       }
-      a.link{
-        color:white !important;
+      a.link {
+        color: white !important;
         text-decoration: none !important;
         outline-color: red !important;
       }
       p.link-text {
         font-size: 2rem;
         color: white;
-        
 
         &:hover {
           text-decoration: underline;

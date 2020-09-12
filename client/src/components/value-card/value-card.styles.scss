@@ -5,22 +5,23 @@
   max-width: 90%;
   position: relative;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 8px;
   margin-bottom: 5rem;
-  background-position: center;
   box-shadow: rgba(0, 0, 0, 0.3) -1px 2.5px 3px,
     rgba(0, 0, 0, 0.3) -1px 6px 14px;
 
   transition: 0.3s ease;
 
   &:hover {
-    scale: 1.025;
+    transform: scale(1.025);
 
     box-shadow: rgba(0, 0, 0, 0.3) -2px 3.5px 4px,
       rgba(0, 0, 0, 0.3) -2px 7px 15px;
   }
 
-  .item {
+  .darkness {
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
@@ -50,6 +51,31 @@
         letter-spacing: 0.1rem;
         font-size: 2.25rem;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .value-card {
+    height: 50rem;
+    .darkness .text-container {
+      .number {
+        font-size: 7rem;
+      }
+      .text {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .value-card .darkness .text-container {
+    .number {
+      font-size: 6rem;
+    }
+    .text {
+      font-size: 1.5rem;
     }
   }
 }

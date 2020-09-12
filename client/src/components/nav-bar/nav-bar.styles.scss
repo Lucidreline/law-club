@@ -37,7 +37,6 @@ nav#nav-bar {
             border-color: #c4a300 !important;
           }
         }
-
       }
 
       a {
@@ -50,7 +49,7 @@ nav#nav-bar {
       }
 
       &:hover {
-        scale: 1.05;
+        transform: scale(1.05);
       }
     }
   }
@@ -70,8 +69,6 @@ nav#nav-bar {
       right: 8%;
       top: 70%;
       transition: 0.8s;
-
-
     }
 
     .nav-links {
@@ -101,7 +98,6 @@ nav#nav-bar {
           }
         }
 
-
         &.active {
           a {
             border-bottom: none;
@@ -118,7 +114,7 @@ nav#nav-bar {
 
         &.fade {
           opacity: 1;
-          scale: 1.5;
+          transform: scale(1.5);
         }
       }
 
