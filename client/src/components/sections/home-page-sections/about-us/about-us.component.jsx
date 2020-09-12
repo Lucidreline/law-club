@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './about-us.styles.scss';
+
 import AboutCard from '../../../about-card/about-card.component';
 import SectionTitle from '../../../section-title/section-title.component';
 import ValueCard from '../../../value-card/value-card.component';
@@ -41,6 +43,11 @@ const AboutUs = () => {
         title='Mission'
         text='The purposes of this organization are to provide pre-law students with the information they need to make an intelligent choice about law schools, and also to stimulate an interest in law on campus generally. Although many of Pre-Law Society members are planning to attend law school, many others simply have an interest in the law and how it affects all the aspects of their personal, community, and business activities. While many members are business or political science majors, the membership of the Pre-Law Society ecompasses a wide variety of interests and talents.'
       />
+
+      <div className='values-title'>
+        <h2>Values</h2>
+      </div>
+
       {values.map((value, index) => (
         <ValueCard
           text={value.text}
