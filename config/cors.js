@@ -1,13 +1,12 @@
-
-const whitelist = ['http://localhost:3000', 'https://pls.manuelc.me']
+const whitelist = ['http://localhost:3010', 'https://pls.manuelc.me'];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
+      callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'))
+      callback(new Error('Not allowed by CORS'));
     }
-  }
-}
+  },
+};
 
-module.export = corsOptions
+module.export = corsOptions;

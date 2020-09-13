@@ -1,120 +1,125 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import Input from '../../../input/input.component';
-import Btn from '../../../btn/btn.component'
+import Btn from '../../../btn/btn.component';
 
-import './contact-us-form.styles.scss'
+import './contact-us-form.styles.scss';
 
 class ContactUsForm extends Component {
-
   constructor() {
-    super()
+    super();
     this.state = {
       emailSent: false,
       name: '',
       email: '',
-      message: ''
-    }
+      message: '',
+    };
   }
 
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value }); // if name = email, then {email: value}, etc. So it can be dynamic
 
-    if (e.target.value.trim() !== '')
-      e.target.classList.add('valid')
-    else
-      e.target.classList.remove('valid')
-  }
+    if (e.target.value.trim() !== '') e.target.classList.add('valid');
+    else e.target.classList.remove('valid');
+  };
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    const { name, email, message } = this.state
+    e.preventDefault();
+    const { name, email, message } = this.state;
 
     // validate data
 
-
     // send via sendgrid
 
-    this.sendEmail(name, email, message)
-
+    this.sendEmail(name, email, message);
 
     // clear form
-    this.clearForm(e)
-
-  }
+    this.clearForm(e);
+  };
 
   clearForm = (form) => {
-    this.setState({ name: '', email: '', message: '' })
-    form.target.reset()
-    document.querySelectorAll('.contact-us-form form input').forEach(input => {
-      input.classList.remove('valid')
-    })
-    document.querySelectorAll('.contact-us-form form textarea').forEach(input => {
-      input.classList.remove('valid')
-    })
-  }
+    this.setState({ name: '', email: '', message: '' });
+    form.target.reset();
+    document
+      .querySelectorAll('.contact-us-form form input')
+      .forEach((input) => {
+        input.classList.remove('valid');
+      });
+    document
+      .querySelectorAll('.contact-us-form form textarea')
+      .forEach((input) => {
+        input.classList.remove('valid');
+      });
+  };
 
   sendEmail = (_name, _email, _message) => {
     const userInfo = {
       name: _name,
       email: _email,
-      msg: _message
+      msg: _message,
+    };
 
-    }
-
-    fetch('http://localhost:3010/email', {
+    const requestOptions = {
       method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(userInfo)
-    }).then(this.setState({ emailSent: true }))
-
-
-  }
-
-
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(userInfo),
+    };
+    fetch('https://pls.manuelc.me/email', requestOptions).then(
+      this.setState({ emailSent: true })
+    );
+  };
 
   render() {
-    const inputs =
+    const inputs = (
       <form onSubmit={this.handleSubmit}>
         <h2 className='form-title'>Send us an Email!</h2>
-        <Input type='text' name='name' placeholder='Name' handleChange={this.handleChange} />
-        <Input type='text' name='email' placeholder='Email' handleChange={this.handleChange} />
-        <Input type='textArea' name='message' placeholder='Message' handleChange={this.handleChange} />
-        <Btn className='needs-margin-top' type='submit' color='orange' >
+        <Input
+          type='text'
+          name='name'
+          placeholder='Name'
+          handleChange={this.handleChange}
+        />
+        <Input
+          type='text'
+          name='email'
+          placeholder='Email'
+          handleChange={this.handleChange}
+        />
+        <Input
+          type='textArea'
+          name='message'
+          placeholder='Message'
+          handleChange={this.handleChange}
+        />
+        <Btn className='needs-margin-top' type='submit' color='orange'>
           Send
         </Btn>
       </form>
+    );
 
-    const receipt =
+    const receipt = (
       <div className='email-receipt'>
         <h2>Your Email Was Sent!</h2>
-        <i className="fas fa-paper-plane"></i>
+        <i className='fas fa-paper-plane'></i>
         <p className='msg'>We will get back to you as soon as possible!</p>
         <p className='thank-you'>Thank you!</p>
         <Link to='/home' className='text-decoration-none'>
           <Btn className='needs-margin-top'>Return Home</Btn>
         </Link>
       </div>
-
+    );
 
     let contentToShow;
 
     if (this.state.emailSent) {
-      contentToShow = receipt
+      contentToShow = receipt;
     } else {
-      contentToShow = inputs
+      contentToShow = inputs;
     }
 
-    return (
-      <div className='contact-us-form'>
-        {contentToShow}
-      </div>
-    );
+    return <div className='contact-us-form'>{contentToShow}</div>;
   }
 }
 

@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // allows us to only recieve requests from a list of origins
 app.use(cors(require('./config/cors')));
 
-app.post('/email', (req, res) => {
+app.post('/email', async (req, res) => {
   try {
     sgMail.setApiKey(config.get('SendGridKey'));
     const { name, email, msg } = req.body;
@@ -23,7 +23,7 @@ app.post('/email', (req, res) => {
       subject: 'PLS Website Message',
       text: `Name: ${name}\n\nEmail: ${email}\n\nMessage:\n ${msg}`,
     };
-    return sgMail.send(emailToSend);
+    console.log(await sgMail.send(emailToSend));
   } catch (err) {
     return console.log(err);
   }
