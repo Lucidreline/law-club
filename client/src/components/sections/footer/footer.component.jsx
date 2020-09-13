@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './footer.styles.scss';
 
+import linksAndContactInfo from '../../../data/linksAndContactInfo.data';
+
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -33,7 +35,7 @@ const Footer = () => {
             <span className='small-bold'>Visit</span>
             <a
               className='link-item text-decoration-none'
-              href='https://torolink.csudh.edu/organization/pre-lawsociety'
+              href={linksAndContactInfo.toroLink}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -45,7 +47,7 @@ const Footer = () => {
             <span className='small-bold'>Follow</span>
             <a
               className='link-item text-decoration-none'
-              href='https://www.instagram.com/csudhprelaw/'
+              href={linksAndContactInfo.instagram}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -53,7 +55,7 @@ const Footer = () => {
             </a>
             <a
               className='link-item text-decoration-none'
-              href='https://www.facebook.com/groups/CSUDHPreLawSociety'
+              href={linksAndContactInfo.facebook}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -61,7 +63,7 @@ const Footer = () => {
             </a>
             <a
               className='link-item text-decoration-none'
-              href='https://twitter.com/CSUDH_Prelaw'
+              href={linksAndContactInfo.twitter}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -72,13 +74,13 @@ const Footer = () => {
             <span className='small-bold'>Contact</span>
             <a
               className='link-item text-decoration-none'
-              href='mailto: csudhprelawsociety@gmail.com'
+              href={`mailto: ${linksAndContactInfo.email}`}
               target='_blank'
               rel='noopener noreferrer'
             >
-              csudhprelawsociety@gmail.com
+              {linksAndContactInfo.email}
             </a>
-            <p className='phone-number'>424-356-9116</p>
+            <p className='phone-number'>{linksAndContactInfo.phoneNumber}</p>
           </div>
         </div>
         <p className='copyright'>

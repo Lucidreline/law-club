@@ -1,3 +1,6 @@
+// use in case you don't have the torolink for the event
+import linksAndContactInfo from './linksAndContactInfo.data';
+
 const events = [
   {
     id: '0',
@@ -21,7 +24,7 @@ const events = [
       },
     },
     location: 'LSU Ballroom B',
-    toroLink: 'https://torolink.csudh.edu/organization/pre-lawsociety',
+    toroLink: linksAndContactInfo.toroLink,
   },
   {
     id: '1',
@@ -45,7 +48,7 @@ const events = [
       },
     },
     location: '1910 Cafe',
-    toroLink: 'https://torolink.csudh.edu/organization/pre-lawsociety',
+    toroLink: linksAndContactInfo.toroLink,
   },
 ];
 

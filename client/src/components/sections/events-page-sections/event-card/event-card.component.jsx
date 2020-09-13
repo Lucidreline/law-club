@@ -5,6 +5,8 @@ import Btn from '../../../btn/btn.component';
 import './event-card.styles.scss';
 import { stringifyTime, stringifyDate } from './time.utils';
 
+import linksAndContactInfo from '../../../../data/linksAndContactInfo.data';
+
 const EventCard = ({ event, eventPassed }) => {
   const { id, name, description, image, date, location, toroLink } = event;
 
@@ -15,7 +17,7 @@ const EventCard = ({ event, eventPassed }) => {
       <a
         rel='noopener noreferrer'
         target='_blank'
-        href={'https://torolink.csudh.edu/organization/pre-lawsociety'}
+        href={linksAndContactInfo.toroLink}
         className='event-toro-link text-decoration-none'
       >
         <Btn>Toro Link!</Btn>
