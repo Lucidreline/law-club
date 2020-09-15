@@ -68,7 +68,7 @@ class EventsPage extends React.Component {
     }
 
     return (
-      <div>
+      <div id='events-page'>
         <NavBar />
         {/* eslint-disable-next-line */}
         <h1 style={{ textAlign: 'center' }}>🚧 Under Construction!👷‍♂ 🚧</h1>
@@ -83,7 +83,7 @@ class EventsPage extends React.Component {
         <h2 className='event-type-title'>Past Events:</h2>
         {noPastEventsMsg}
         {pastEvents.map((pastEvent, index) => (
-          <div data-aos='fade-up' key={index}>
+          <div data-aos='fade-up' className='passed-events' key={index}>
             <EventCard eventPassed={true} event={pastEvent} key={index} />
           </div>
         ))}

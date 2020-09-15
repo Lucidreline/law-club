@@ -1,60 +1,65 @@
-#footer {
-  background: #c4a300;
-  color: white;
-  font-size: 1.7rem;
-  box-shadow: #c4a300 0 11rem;
-  padding: 5rem 0;
-  margin-top: 7rem;
+.footer-container {
+  .white-margin {
+    background-color: white;
+    height: 10rem;
+  }
 
-  a {
+  #footer {
+    background: #c4a300;
     color: white;
-  }
+    font-size: 1.7rem;
+    padding: 5rem 0;
 
-  .intro span.mission,
-  .copyright,
-  .link-item,
-  .phone-number {
-    opacity: 0.8;
-  }
+    a {
+      color: white;
+    }
 
-  a.developer-link {
-    opacity: 1;
-    font-weight: 600;
+    .intro span.mission,
+    .copyright,
+    .link-item,
+    .phone-number {
+      opacity: 0.8;
+    }
 
-    &:hover {
+    a.developer-link {
+      opacity: 1;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+
+    .link-item:hover {
       text-decoration: underline !important;
     }
-  }
 
-  .link-item:hover {
-    text-decoration: underline !important;
-  }
+    .footer-container {
+      width: 90%;
+      margin: auto;
 
-  .footer-container {
-    width: 90%;
-    margin: auto;
+      .footer-collumns {
+        display: flex;
+        flex-wrap: wrap;
 
-    .footer-collumns {
-      display: flex;
-      flex-wrap: wrap;
+        .collumn {
+          width: 20rem;
+          margin: 0 5rem 3rem 0;
 
-      .collumn {
-        width: 20rem;
-        margin: 0 5rem 3rem 0;
+          &.intro {
+            h3 {
+              font-size: 3.5rem;
+              font-weight: 700;
+            }
+          }
 
-        &.intro {
-          h3 {
-            font-size: 3.5rem;
+          .small-bold {
             font-weight: 700;
           }
-        }
 
-        .small-bold {
-          font-weight: 700;
-        }
-
-        .link-item {
-          display: block;
+          .link-item {
+            display: block;
+          }
         }
       }
     }

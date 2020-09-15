@@ -1,19 +1,27 @@
-.event-type-title,
-.event-msg {
-  width: 90%;
-  max-width: 120rem;
-  margin: auto;
-}
+#events-page {
+  background-color: white;
 
-.event-type-title {
-  color: #ffd600;
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-}
+  .passed-events:last-child .event-card {
+    margin-bottom: 0;
+  }
 
-.event-msg {
-  margin-bottom: 3rem;
-  margin-top: -1rem;
-  font-size: 2rem;
+  .event-type-title,
+  .event-msg {
+    width: 90%;
+    max-width: 120rem;
+    margin: auto;
+  }
+
+  .event-type-title {
+    color: #ffd600;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .event-msg {
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+    font-size: 2rem;
+  }
 }

@@ -1,22 +1,22 @@
 import React from 'react';
 
-import './board-members-page.styles.scss'
+import './board-members-page.styles.scss';
 
-import boardMembers from '../../../data/board-members.data'
+import boardMembers from '../../../data/board-members.data';
 
 import NavBar from '../../nav-bar/nav-bar.component';
-import SectionTitle from '../../section-title/section-title.component'
-import BoardMemberCard from '../../sections/board-members-page-sections/board-member-card/board-member-card'
+import SectionTitle from '../../section-title/section-title.component';
+import BoardMemberCard from '../../sections/board-members-page-sections/board-member-card/board-member-card';
 
-import { dynamicHrefScrollJump } from '../../../utils'
+import { dynamicHrefScrollJump } from '../../../utils';
 
 class BoardMembersPage extends React.Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
-      boardMembers
-    }
+      boardMembers,
+    };
   }
 
   componentDidMount() {
@@ -32,14 +32,18 @@ class BoardMembersPage extends React.Component {
         <div className='main-container'>
           <SectionTitle title='Meet The Board' />
           {this.state.boardMembers.map((boardMember, index) => (
-            <div data-aos='fade-up'>
-              <BoardMemberCard boardMember={boardMember} index={index} key={index} />
+            <div data-aos='fade-up' className='card-container'>
+              <BoardMemberCard
+                boardMember={boardMember}
+                index={index}
+                key={index}
+              />
             </div>
           ))}
         </div>
       </div>
     );
   }
-};
+}
 
 export default BoardMembersPage;
