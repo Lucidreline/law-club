@@ -7,6 +7,7 @@ import EventCard from '../../sections/events-page-sections/event-card/event-card
 import events from '../../../data/events.data';
 
 import { dynamicHrefScrollJump } from '../../../utils';
+import SectionTitle from '../../section-title/section-title.component';
 
 class EventsPage extends React.Component {
   constructor() {
@@ -70,6 +71,9 @@ class EventsPage extends React.Component {
     return (
       <div id='events-page'>
         <NavBar />
+        <div className='margin-container'>
+          <SectionTitle title='Events' />
+        </div>
         <h2 className='event-type-title'>Future Events:</h2>
         {noFutureEventsMsg}
 

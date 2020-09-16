@@ -1,6 +1,11 @@
 #events-page {
   background-color: white;
 
+  .margin-container {
+    margin: auto;
+    width: 90%;
+  }
+
   .passed-events:last-child .event-card {
     margin-bottom: 0;
   }
