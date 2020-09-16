@@ -70,8 +70,6 @@ class EventsPage extends React.Component {
     return (
       <div id='events-page'>
         <NavBar />
-        {/* eslint-disable-next-line */}
-        <h1 style={{ textAlign: 'center' }}>🚧 Under Construction!👷‍♂ 🚧</h1>
         <h2 className='event-type-title'>Future Events:</h2>
         {noFutureEventsMsg}
 

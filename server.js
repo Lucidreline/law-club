@@ -19,7 +19,7 @@ app.post('/email', async (req, res) => {
     const { name, email, msg } = req.body;
     const emailToSend = {
       to: config.get('ClientEmail'),
-      from: config.get('ClientEmail'),
+      from: config.get('DevEmail'),
       subject: 'PLS Website Message',
       text: `Name: ${name}\n\nEmail: ${email}\n\nMessage:\n ${msg}`,
     };
