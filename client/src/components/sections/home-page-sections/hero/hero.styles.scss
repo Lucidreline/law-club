@@ -218,20 +218,33 @@
 }
 
 @media screen and (max-width: 400px) {
-  #hero .hero-content .text .text-content {
-    top: 30%;
+  #hero {
+    .bottom-btn {
+      span {
+        display: block;
+        font-size: 2rem;
+        font-weight: 600;
+      }
 
-    h1.title {
-      font-size: 4.25rem;
+      i {
+        font-size: 1.5rem;
+      }
     }
+    .hero-content .text .text-content {
+      top: 30%;
 
-    p.subtitle {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
+      h1.title {
+        font-size: 4.25rem;
+      }
 
-    .btns .btn-container button {
-      display: none;
+      p.subtitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .btns .btn-container button {
+        display: none;
+      }
     }
   }
 }

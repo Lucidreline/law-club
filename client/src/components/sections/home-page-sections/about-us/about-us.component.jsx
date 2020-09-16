@@ -9,17 +9,23 @@ import Gallery from '../gallery/gallery.component';
 
 const AboutUs = () => {
   const values = [
-    {
-      text:
-        'Pre Law Society will work towards helping students achieve a better knowledge about how the law school application process looks like.',
-      background:
-        'https://res.cloudinary.com/dglxjd018/image/upload/v1599886345/PreLawSociety/Values/Values_Gavel_ii6ysx.jpg',
-    },
+    // {
+    //   text:
+    //     'Pre Law Society will work towards helping students achieve a better knowledge about how the law school application process looks like.',
+    //   background:
+    //     'https://res.cloudinary.com/dglxjd018/image/upload/v1600225511/PreLawSociety/Values/SmallGav_xhqsbm.jpg',
+    // },
     {
       text:
         'Pre Law Society will work towards providing students the information necessary in order for them to make an intelligent choice about the law schools they wish to attend.',
       background:
         'https://res.cloudinary.com/dglxjd018/image/upload/v1599886345/PreLawSociety/Values/Values_Books_ofphkd.jpg',
+    },
+    {
+      text:
+        'Pre Law Society will work towards helping students achieve a better knowledge about how the law school application process looks like.',
+      background:
+        'https://res.cloudinary.com/dglxjd018/image/upload/v1600225511/PreLawSociety/Values/SmallGav_xhqsbm.jpg',
     },
     {
       text:

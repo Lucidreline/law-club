@@ -73,7 +73,7 @@ const boardMembers = [
       'My position is Co-Secretary 😊 I am currently a super senior at DH, I finally graduate Spring 2021! I major in Sociology, and minor in criminal justice.',
     funFact: "I am an identical twin! We're two minutes apart 👯‍♀",
     image:
-      'https://res.cloudinary.com/dglxjd018/image/upload/v1597698415/PreLawSociety/Board%20Members/Board_Members_Yazmine_shucnb.png',
+      'https://res.cloudinary.com/dglxjd018/image/upload/v1600226028/PreLawSociety/Board%20Members/Board_Members_Yazmine_shucnb.png',
   },
   {
     id: '6',
