@@ -49,11 +49,10 @@ const AboutUs = () => {
       </div>
 
       {values.map((value, index) => (
-        <div data-aos='zoom-in-up'>
+        <div data-aos='zoom-in-up' key={index}>
           <ValueCard
             text={value.text}
             index={++index}
-            key={index}
             background={value.background}
           />
         </div>

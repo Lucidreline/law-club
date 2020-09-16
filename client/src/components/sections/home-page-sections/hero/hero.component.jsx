@@ -39,7 +39,7 @@ const Hero = () => {
       </div>
       <div className='bottom-btn' onClick={jumpToAboutUs}>
         <span>About Us</span>
-        <i class='fas fa-chevron-down'></i>
+        <i className='fas fa-chevron-down'></i>
       </div>
     </section>
   );

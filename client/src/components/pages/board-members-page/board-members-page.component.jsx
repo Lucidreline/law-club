@@ -32,12 +32,8 @@ class BoardMembersPage extends React.Component {
         <div className='main-container'>
           <SectionTitle title='Meet The Board' />
           {this.state.boardMembers.map((boardMember, index) => (
-            <div data-aos='fade-up' className='card-container'>
-              <BoardMemberCard
-                boardMember={boardMember}
-                index={index}
-                key={index}
-              />
+            <div data-aos='fade-up' key={index} className='card-container'>
+              <BoardMemberCard boardMember={boardMember} index={index} />
             </div>
           ))}
         </div>
