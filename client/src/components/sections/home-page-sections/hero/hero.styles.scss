@@ -98,7 +98,7 @@
 
       p.subtitle,
       button {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
     }
   }
@@ -135,7 +135,7 @@
 
       p.subtitle,
       button {
-        font-size: 1.75rem;
+        font-size: 2.1rem;
       }
     }
   }
@@ -163,7 +163,7 @@
 
           p.subtitle,
           .btns .btn-container button {
-            font-size: 1.75rem;
+            font-size: 2.3rem;
           }
 
           .btns {
@@ -188,11 +188,50 @@
     }
 
     p.subtitle {
-      font-size: 1.25rem;
+      font-size: 2.5rem;
     }
 
     .btns .btn-container button {
       font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #hero .hero-content .text .text-content {
+    top: 30%;
+
+    h1.title {
+      font-size: 4.25rem;
+    }
+
+    p.subtitle {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .btns .btn-container button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #hero .hero-content .text .text-content {
+    top: 30%;
+
+    h1.title {
+      font-size: 4.25rem;
+    }
+
+    p.subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .btns .btn-container button {
+      display: none;
     }
   }
 }
