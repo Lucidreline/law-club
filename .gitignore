@@ -24,3 +24,6 @@ client/build/
 .env.production.local
 
 npm-debug.log*
+
+# Local Netlify folder
+.netlify
