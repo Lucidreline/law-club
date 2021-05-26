@@ -66,7 +66,8 @@ class ContactUsForm extends Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userInfo),
     };
-    fetch('https://pls.manuelc.me/email', requestOptions).then(
+
+    fetch(`${process.env.REACT_APP_URL}/send-email`, requestOptions).then(
       this.setState({ emailSent: true })
     );
   };
