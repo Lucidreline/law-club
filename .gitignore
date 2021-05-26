@@ -3,6 +3,7 @@
 # environment variables
 config/default.json
 config/production.json
+.env
 
 # dependencies
 /node_modules
